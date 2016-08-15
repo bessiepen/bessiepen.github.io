@@ -1,0 +1,772 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="提问,黑客,跟进《人人都是工程师》," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
+
+
+
+
+
+
+<meta name="description" content="（注，以下的黑客包括了已经是黑客和正在以黑客为目标努力的程序员高手）
+花了一个星期通读了一遍《How To Ask Questions The Smart Way》（这真是一篇好长的文档，以下用《How To》代替），感觉自己的英文阅读能力稍微又进步了一点，果然用才是硬道理。才开始读的时候，是一段hacker的立场声明，hacker的那种看待世界的方式真是太吸引我了，太酷了，这也是我为什么想拐入编">
+<meta property="og:type" content="article">
+<meta property="og:title" content="提问不是一件想当然的事">
+<meta property="og:url" content="http://penggeyao.me/posts/20160724-asking-questions-is-not-simple.html">
+<meta property="og:site_name" content="彭个瑶.ME">
+<meta property="og:description" content="（注，以下的黑客包括了已经是黑客和正在以黑客为目标努力的程序员高手）
+花了一个星期通读了一遍《How To Ask Questions The Smart Way》（这真是一篇好长的文档，以下用《How To》代替），感觉自己的英文阅读能力稍微又进步了一点，果然用才是硬道理。才开始读的时候，是一段hacker的立场声明，hacker的那种看待世界的方式真是太吸引我了，太酷了，这也是我为什么想拐入编">
+<meta property="og:updated_time" content="2016-08-15T04:29:04.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="提问不是一件想当然的事">
+<meta name="twitter:description" content="（注，以下的黑客包括了已经是黑客和正在以黑客为目标努力的程序员高手）
+花了一个星期通读了一遍《How To Ask Questions The Smart Way》（这真是一篇好长的文档，以下用《How To》代替），感觉自己的英文阅读能力稍微又进步了一点，果然用才是硬道理。才开始读的时候，是一段hacker的立场声明，hacker的那种看待世界的方式真是太吸引我了，太酷了，这也是我为什么想拐入编">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Muse',
+    sidebar: {"position":"right","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: '博主'
+    }
+  };
+</script>
+
+
+
+
+  <link rel="canonical" href="http://penggeyao.me/posts/20160724-asking-questions-is-not-simple.html"/>
+
+  <title> 提问不是一件想当然的事 | 彭个瑶.ME </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?d3bc5408f1fc7191eacfc1ebe685e83c";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-right page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">彭个瑶.ME</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle"></p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                提问不是一件想当然的事
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-07-24T08:32:01+08:00" content="2016-07-24">
+              2016-07-24
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/readingnotes/" itemprop="url" rel="index">
+                    <span itemprop="name">阅读笔记</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/posts/20160724-asking-questions-is-not-simple.html#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="posts/20160724-asking-questions-is-not-simple.html" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p><em>（注，以下的黑客包括了已经是黑客和正在以黑客为目标努力的程序员高手）</em></p>
+<p>花了一个星期通读了一遍<a href="http://www.catb.org/esr/faqs/smart-questions.html" target="_blank" rel="external">《How To Ask Questions The Smart Way》</a>（这真是一篇好长的文档，以下用《How To》代替），感觉自己的英文阅读能力稍微又进步了一点，果然<a href="http://zhibimo.com/read/xiaolai/everyone-can-use-english/" target="_blank" rel="external">用</a>才是硬道理。才开始读的时候，是一段hacker的立场声明，hacker的那种看待世界的方式真是太吸引我了，太酷了，这也是我为什么想拐入编程学习的原因之一。看完这篇文档，收获大大，比起具体的方法论，更重要的是做事的方式问题。现整理如下。<br><a id="more"></a></p>
+<blockquote>
+<p>note：《How To》是一篇专为计算机、编程学习的人提供的一篇如何向高手/黑客/开发者等问问题的指导型文档。它诞生于（我揣测的）太多人在问问题这件事上漏洞百出，蠢不堪言，高手们忍无可忍了，必需有责任亲自写一篇指导型文档，亲自教导真正想要解决问题的人如何正确地向自己提问。是的，我都写在这里了，你不照做，别怪我不回答你。</p>
+</blockquote>
+<h2 id="黑客文化是什么？"><a href="#黑客文化是什么？" class="headerlink" title="黑客文化是什么？"></a>黑客文化是什么？</h2><p>我们想要向高手寻求帮助，首先要了解高手们是如何处事的，“投其所好”，才可能得到他们的帮助。</p>
+<p>之前看过（还未看完）一本好书<a href="https://book.douban.com/subject/6021440/" target="_blank" rel="external">《黑客与画家》</a>，在序言中尤其澄清了下传统的真正的黑客是怎样的。</p>
+<blockquote>
+<ul>
+<li>在他们看来，如果要完成一个hack，就依然包含着<strong>高度的革新、独树一帜的风格、精湛的技艺</strong>。最能干的人会自豪地称自己为黑客。</li>
+<li>“黑客”这个词不仅是第一流能力的象征，还包含着求解问题过程中产生的<strong>精神愉悦或享受</strong>。</li>
+<li>自由软件基金会创始人理查德·斯托尔曼说：“出于<strong>兴趣</strong>而解决某个问题，不管它有没有用，这就是黑客。”</li>
+</ul>
+</blockquote>
+<p>这基本上决定了一个高手愿不愿意解决你的问题取决于他对你的问题是否感兴趣，你的问题是否是有价值的.书中引用了另一本书<a href="https://book.douban.com/subject/6860890/" target="_blank" rel="external">《黑客：计算机革命的英雄》</a>中提出的黑客伦理，这是我们理解黑客核心价值观的最佳论述：</p>
+<blockquote>
+<p><em>黑客伦理：</em></p>
+<ol>
+<li>使用计算机以及所有有助于了解这个世界本质的事物都不应受到任何限制。任何事情都应该亲手尝试。</li>
+<li>信息应该全部免费。</li>
+<li>不信任权威，提倡去中心化。</li>
+<li>判断一名黑客的水平应该看他的技术能力，而不是看他的学历、年龄或地位等其他标准。</li>
+<li>你可以用计算机创造美和艺术。</li>
+<li>计算机使生活更美好。</li>
+</ol>
+</blockquote>
+<p>以上概括成这几点：分享、开放、民主、计算机的自由使用、进步。</p>
+<p>在《How To》中，除了计算机的自由使用这一点，其他都能反复找到痕迹。</p>
+<p><em>（注：以下开始的引用内容，来自《How To》，但大多并非逐字翻译，而是我基于文档的总结概括）</em></p>
+<h3 id="分享、开放"><a href="#分享、开放" class="headerlink" title="分享、开放"></a>分享、开放</h3><blockquote>
+<ul>
+<li>不要发私人邮件，要公开写出来（如论坛），有助于让更多的人来帮助解决问题，也有助于给以后对这类问题有疑问的人提供参考。</li>
+<li>黑客文化倡导透明、开源，大家一起学习和互助。</li>
+</ul>
+</blockquote>
+<h3 id="民主、进步"><a href="#民主、进步" class="headerlink" title="民主、进步"></a>民主、进步</h3><blockquote>
+<ul>
+<li>是否已经具备能够吸引我们注意的技术性能力并不是必须的，必须的是你有一种最终可以导致这种能力的态度：警醒、思考、观察、愿意成为一个解决问题的参与者。</li>
+<li>好的问题可以帮助我们更好地思考，而且常常能够揭露那些我们也许还没有注意到或思考到的地方，所以如果你能问出一个好问题，我们非常感激。</li>
+</ul>
+</blockquote>
+<p>但也还有另外一些重点观念，我在文档中反复发现。正因为黑客是这样一群对难题（他们的难题和我们以为的难题并不一定在同一水准上）如视珍宝、具有源源不断的探索精神、高难度思考需求的精英，因此他们要求高效率，要求能体现价值，他们不想把时间花在无意义的事情上，并且由于他们本身具有的黑客文化，一点都不介意他人对自己的看法，因此他们<strong>只关注问题，实事求是，不关注情绪或过于礼貌等对解决问题来说多余的累赘。</strong></p>
+<p>如：</p>
+<blockquote>
+<ul>
+<li>黑客更愿意理那些虽然不礼貌但是问题问得很有水平的人，也不愿意理那些非常礼貌却把问题说的不清不楚的人。</li>
+<li>不要问无语义无价值的问题，比如：有人能帮助我吗？简直多余（因为你问题问得好，自然有人回答，你问题问得错漏百出，黑客会直接无视）。</li>
+<li>过度自卑和自谦和唯唯诺诺对解决问题没有任何帮助，堂堂正正、客观事实地提出自己的问题，提供有价值的信息就行了。</li>
+<li>在论坛中不要滥用表情符号和富文本格式，让人感觉你关注方向有问题，你是来解决问题的还是来干嘛的？显得你很幼稚，像叽叽喳喳的小女孩。</li>
+<li>比起让别人觉得舒服，解决问题才是黑客们关心的事。所以不要介意他们的粗鲁。</li>
+</ul>
+</blockquote>
+<h3 id="亲自动手"><a href="#亲自动手" class="headerlink" title="亲自动手"></a>亲自动手</h3><p>黑客非常崇尚<strong>实践，亲自动手</strong>。懒汉在他们眼中就是唯恐避之不及的时间陷阱：</p>
+<blockquote>
+<ul>
+<li>一定要花时间，解决一个问题不是那么简单的，至少要读很多资料，寻求帮助只是最后才该做的事。</li>
+<li>我们是这样一种人：<strong>对那些提问之前不愿意自己先思考，自己先试着做的人充满敌意。</strong> 这样的人简直是时间陷阱，他们只知道索取，不知道付出。</li>
+</ul>
+</blockquote>
+<p>黑客是一群对自己有明确定义和明确价值观的人。这样的人知道自己在做什么，有很高和快速的抉择水平，但他们也是人，精力有限，百忙之中抽出一点时间来为他人解决问题，他们收到的邮件量是很大的，而没水准甚至情绪发泄的咨询邮件可能是压断骆驼背的最后一根稻草。因此，既然有问题的是我们，想要得到有用解决方法的是我们，就该摆正态度，努力为帮助自己解决问题的他们着想。没有谁在不付费的情况下有义务为你解决问题。</p>
+<h2 id="我们应该怎么向黑客-高手问问题"><a href="#我们应该怎么向黑客-高手问问题" class="headerlink" title="我们应该怎么向黑客/高手问问题"></a>我们应该怎么向黑客/高手问问题</h2><p>我们的问题想要被认可，必需符合一定的以上提到的黑客文化。也许每个人都有过这样的感受：有时有人向自己寻求帮助，却可以把自己气得够呛，也许每个人生气的原因不同，那是因为人人都有自己的处事原则，当这个提问者触犯了我们的处事原则，我们一点也不想帮助他。同理，高手们更有一套属于自己的处事原则。</p>
+<p>核心指导原则记住：</p>
+<h3 id="凡是能在互联网上搜索到的就不要问人，这个原则贯穿询问前、询问中、询问后整个过程；"><a href="#凡是能在互联网上搜索到的就不要问人，这个原则贯穿询问前、询问中、询问后整个过程；" class="headerlink" title="凡是能在互联网上搜索到的就不要问人，这个原则贯穿询问前、询问中、询问后整个过程；"></a>凡是能在互联网上搜索到的就不要问人，这个原则贯穿询问前、询问中、询问后整个过程；</h3><p>这个能在互联网上搜索到的程度是怎样的？是这样的：</p>
+<ol>
+<li>搜索论坛中已存档的档案，那里也许有人问过同样的问题；</li>
+<li>用google搜索网页；</li>
+<li>查看手册，软件和产品通常都有自己的使用手册；</li>
+<li>查看常见问题解答（FAQ）；</li>
+<li>如果学的是编程，还可以阅读开源代码来寻求答案；</li>
+<li>当你对回答你的人中的某个术语不懂时，不要问他，而是问互联网，实在搜索不到，再问他。</li>
+</ol>
+<p>这样动手就行了吗？还不行。</p>
+<h3 id="用尽一切办法准备你的问题"><a href="#用尽一切办法准备你的问题" class="headerlink" title="用尽一切办法准备你的问题"></a>用尽一切办法准备你的问题</h3><p>投入更多的努力，就可能得到更多有用的信息：</p>
+<ol>
+<li><p>找对位置，在相关的专门网站寻找答案或提出问题；</p>
+<ol>
+<li>不要在讨论windows的地方问mac的问题，其他同理；</li>
+<li>不要在讨论基础问题的地方问高阶问题，反之亦然；</li>
+<li>非技术性问题不要问开发论坛，要问用户论坛；</li>
+</ol>
+</li>
+<li><p>提出问题前先看看别人是怎样提问的，了解该论坛的提问风格；</p>
+</li>
+<li><p>注意问题格式；</p>
+<ol>
+<li>标题很重要，以“对象-问题”的格式写，如“X.org 6.8.1 mouse cursor on Fooware MV1005 vid. chipset - is misshapen”，表明问题对象的版本号、使用环境，最后写问题，让人一目了然你的问题是什么；</li>
+<li>不要犯拼写或语法的低级错误，除非你说明自己是非英语母语使用者，但是也要尽力，因为别人能一眼看出你到底是不会还是懒；</li>
+<li>发送纯文本，不要富文本，不要附件；</li>
+<li>表达务必达到即简洁又能把问题说清楚；</li>
+<li>问题过长的，在开始写上摘要；</li>
+<li>只发能保证体现问题的最短代码片，并指清第几行代码自己认为有问题；</li>
+<li>非英语母语使用者，提供问题提供两个版本，母语和英语版；</li>
+</ol>
+</li>
+<li><p>把自己所做的努力写出来，查过哪些文档，做过哪些测试，这能让对方<strong>鉴定出你是否值得帮助</strong>。</p>
+</li>
+</ol>
+<h3 id="体贴入微，为他人节约时间"><a href="#体贴入微，为他人节约时间" class="headerlink" title="体贴入微，为他人节约时间"></a>体贴入微，为他人节约时间</h3><p>给我最大的启发就是这个概念，为他人着想，就是给自己方便，但是你远远不知道原来为别人着想是件多么细致入微的事。就像上文提到的“非英语母语使用者提供问题提供自己的母语和英文版两个版本”一样，是为了方便使用英语的人直接阅读。再者，如：</p>
+<blockquote>
+<ul>
+<li>对于非英语母语使用者，可以告诉对方，你可以用英语回答，我自己愿意翻译。</li>
+<li>不要发送word，excel等附件，给人增加下载下来再打开的麻烦步骤；</li>
+<li>如果程序有自我诊断，诊断过无问题的就排除掉，减轻黑客阅读负担；</li>
+<li>详述但不宽泛地叙述问题，为回答者节省理解和解决时间；</li>
+<li>如果你遇到一个有问题的代码，更好的方式是问别人它错在哪里，而不是让别人来解决它。这样就给别人节省了时间，他可以快速回答，你也能快速得到解题思路；</li>
+<li>在你的问题解决后，给所有帮助过你的人回复一个简短的信息，告知问题已解决；如果解决过程比较复杂，可概括重点，一目了然，同时给大家一个反馈以及互相学习的机会。</li>
+</ul>
+</blockquote>
+<p>你想得越多，越为对方节省时间，减轻麻烦，就越能得到对方的及时帮助。</p>
+<h3 id="认清自己，淡化情绪"><a href="#认清自己，淡化情绪" class="headerlink" title="认清自己，淡化情绪"></a>认清自己，淡化情绪</h3><p>最后，在做到了以上后，还有一个十分重要的事情需要认清：黑客没有义务来为我们解决问题，不要把别人的帮助看做理所当然，因此，摆正自己的位置，不要用情绪来思考，因为黑客关注的只是问题事实，如果他们以幽默的方式嘲笑我们，我们首先要反思的是自己是否问问题问得太不认真，太理所当然？只知道索取，不知道付出？</p>
+<p>因为，一个人可以无知，但不可以犯蠢。<em>It’s OK to be ignorence, it’s not OK to stay stupid</em>.</p>
+<h3 id="最后，需要尤其谨慎的地方"><a href="#最后，需要尤其谨慎的地方" class="headerlink" title="最后，需要尤其谨慎的地方"></a>最后，需要尤其谨慎的地方</h3><ol>
+<li>不要滥发私人邮件；</li>
+<li>不要一个渠道重复发邮件，不要一个邮件多个渠道发；</li>
+<li>不要滥用大写，感觉你在嚎叫；</li>
+<li>不要轻易注明“Urgent！”（紧急！）。</li>
+</ol>
+<p>一个既没有提供有用信息，还叫嚣着急急急的人，真的非常令人反感。</p>
+<h2 id="去掉黑客这个标签，问问题的一般性原则是什么？"><a href="#去掉黑客这个标签，问问题的一般性原则是什么？" class="headerlink" title="去掉黑客这个标签，问问题的一般性原则是什么？"></a>去掉黑客这个标签，问问题的一般性原则是什么？</h2><p>虽然这篇文档更多的是为专业领域的提问提供指导，但是，我们可以从中提炼出一些普遍适用的提问原则。</p>
+<p>今天去驾校考科一时，考前监考员口干舌燥地再三强调各种注意事项，尤其强调让我们现在一定要认真听，<strong>不要到时一上场一有任何问题就马上举手寻求帮助</strong>，监考员说，“一个考场50个人，一个早上200个人，你们动不动就提问，我们回答得过来吗？”“多动动脑筋，因为有些错误犯得实在太低级了（此句是我从一串串生动的例子概括总结的）”。监考员讲得很生气，看来是受够了这样的苦。</p>
+<p>连考试也是要有这样一番考前指导的，提问的艺术无处不在，工作中更是时时发生。最怕遇到那种一点点小问题都要立刻咨询甚至喊你帮他解决的人，问之前，不能先自己想想吗？自己想不出来，不会网上搜索一下吗？网上都搜索不到，或搜到了还是不懂，这个时候才有资格问了。所以，<strong>人们大多数的生气来自于一个不付出的人却强迫你为他的懒惰投入时间和精力。</strong></p>
+<p>因此，总结几条提问的普适原则：</p>
+<ol>
+<li>提问前，自己先思考，自己先动手，自己先搜索摸索；</li>
+<li>提问时，处处为给你解答的人提供便利，节约他们理解和解答的时间；</li>
+<li>解决后，给反馈，甚至是自己的收获，帮助你的人会由衷一笑；</li>
+<li>更高级的，把自己得到的解决方案写下来，供自己复习或供将来有需要的人参考；</li>
+<li>都做到了以上，最后一条感觉没必要了：不要理所当然，不要感情绑架，实事求是，关注问题本身。</li>
+</ol>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/提问/" rel="tag">#提问</a>
+          
+            <a href="/tags/黑客/" rel="tag">#黑客</a>
+          
+            <a href="/tags/跟进《人人都是工程师》/" rel="tag">#跟进《人人都是工程师》</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/posts/20160717-mistakes-i-made-in-gtd.html" rel="next" title="我在时间管理中犯下的错误">
+                <i class="fa fa-chevron-left"></i> 我在时间管理中犯下的错误
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/posts/20160811-monthly-review-in-july-2016.html" rel="prev" title="2016年7月总结">
+                2016年7月总结 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="posts/20160724-asking-questions-is-not-simple.html"
+           data-title="提问不是一件想当然的事" data-url="http://penggeyao.me/posts/20160724-asking-questions-is-not-simple.html">
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/portrait-grey.jpg"
+               alt="penggeayo" />
+          <p class="site-author-name" itemprop="name">penggeayo</p>
+          <p class="site-description motion-element" itemprop="description">If you believe it, then do.</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">4</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">10</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#黑客文化是什么？"><span class="nav-number">1.</span> <span class="nav-text">黑客文化是什么？</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#分享、开放"><span class="nav-number">1.1.</span> <span class="nav-text">分享、开放</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#民主、进步"><span class="nav-number">1.2.</span> <span class="nav-text">民主、进步</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#亲自动手"><span class="nav-number">1.3.</span> <span class="nav-text">亲自动手</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#我们应该怎么向黑客-高手问问题"><span class="nav-number">2.</span> <span class="nav-text">我们应该怎么向黑客/高手问问题</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#凡是能在互联网上搜索到的就不要问人，这个原则贯穿询问前、询问中、询问后整个过程；"><span class="nav-number">2.1.</span> <span class="nav-text">凡是能在互联网上搜索到的就不要问人，这个原则贯穿询问前、询问中、询问后整个过程；</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#用尽一切办法准备你的问题"><span class="nav-number">2.2.</span> <span class="nav-text">用尽一切办法准备你的问题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#体贴入微，为他人节约时间"><span class="nav-number">2.3.</span> <span class="nav-text">体贴入微，为他人节约时间</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#认清自己，淡化情绪"><span class="nav-number">2.4.</span> <span class="nav-text">认清自己，淡化情绪</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#最后，需要尤其谨慎的地方"><span class="nav-number">2.5.</span> <span class="nav-text">最后，需要尤其谨慎的地方</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#去掉黑客这个标签，问问题的一般性原则是什么？"><span class="nav-number">3.</span> <span class="nav-text">去掉黑客这个标签，问问题的一般性原则是什么？</span></a></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">penggeayo</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Muse
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"penggeyao-notes"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+    <script src="/vendors/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+    <script src="/js/src/hook-duoshuo.js"></script>
+  
+
+
+
+
+
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
