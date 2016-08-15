@@ -1548,7 +1548,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #989e25;
+  background: #962fab;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2188,18 +2188,4 @@ h1 {
 }
 a:not(.menu-item):hover {
   color: #bdbdbd;
-}
-.sidebar-nav .sidebar-nav-active {
-  color: #fff;
-  border-bottom-color: #fff;
-}
-.page-post-detail .sidebar-toggle-line {
-  background: #fff;
-}
-.post-toc .nav .active-current > a {
-  color: #fff;
-}
-.post-toc .nav .active > a {
-  color: #fff;
-  border-bottom-color: #fff;
 }
