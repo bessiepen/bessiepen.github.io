@@ -1,3 +1,9 @@
+h2 {
+  font-size: 26px;
+}
+h3 {
+  font-size: 22px;
+}
 /* normalize.css v3.0.2 | MIT License | git.io/normalize */
 html {
   font-family: sans-serif; /* 1 */
@@ -1548,7 +1554,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #4ab383;
+  background: #2882ff;
 }
 .links-of-blogroll {
   font-size: 13px;
