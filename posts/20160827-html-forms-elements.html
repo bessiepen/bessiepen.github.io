@@ -1,0 +1,864 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="cheatsheet,html," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
+
+
+
+
+
+
+<meta name="description" content="List of forms elements">
+<meta property="og:type" content="article">
+<meta property="og:title" content="HTML Cheatsheet: Forms">
+<meta property="og:url" content="http://penggeyao.me/posts/20160827-html-forms-elements.html">
+<meta property="og:site_name" content="彭个瑶.ME">
+<meta property="og:description" content="List of forms elements">
+<meta property="og:updated_time" content="2016-09-18T08:56:37.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="HTML Cheatsheet: Forms">
+<meta name="twitter:description" content="List of forms elements">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Muse',
+    sidebar: {"position":"right","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: '博主'
+    }
+  };
+</script>
+
+
+
+
+  <link rel="canonical" href="http://penggeyao.me/posts/20160827-html-forms-elements.html"/>
+
+  <title> HTML Cheatsheet: Forms | 彭个瑶.ME </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?d3bc5408f1fc7191eacfc1ebe685e83c";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-right page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">彭个瑶.ME</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle"></p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                HTML Cheatsheet: Forms
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-08-27T17:52:12+08:00" content="2016-08-27">
+              2016-08-27
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/technotes/" itemprop="url" rel="index">
+                    <span itemprop="name">技术笔记</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/posts/20160827-html-forms-elements.html#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="posts/20160827-html-forms-elements.html" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="List-of-forms-elements"><a href="#List-of-forms-elements" class="headerlink" title="List of forms elements"></a>List of forms elements</h2><a id="more"></a>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">element</th>
+<th style="text-align:left">attributes</th>
+<th style="text-align:left">info</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>&lt;form&gt;</code></td>
+<td style="text-align:left"><code>action</code>, <code>method</code>, <code>enctype</code></td>
+<td style="text-align:left"><a href="#form">forms</a></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>&lt;textarea&gt;</code></td>
+<td style="text-align:left"><code>name</code>, <code>form</code>, <code>placeholder</code>, <code>required</code>, <code>autofocus</code>, <code>disable</code>, <code>readonly</code></td>
+<td style="text-align:left">text input area</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>&lt;input&gt;</code></td>
+<td style="text-align:left"><strong><code>type</code></strong>, <code>name</code>, <code>form</code>, <code>placeholder</code>, <code>required</code>, <code>autofocus</code>, <code>disable</code>, <code>readonly</code></td>
+<td style="text-align:left"><a href="#input">input control</a></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>&lt;button&gt;</code></td>
+<td style="text-align:left"><strong><code>type</code></strong>, <code>name</code>, <code>form</code>, <code>required</code>, <code>disable</code></td>
+<td style="text-align:left">button</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>&lt;label&gt;</code></td>
+<td style="text-align:left"><strong><code>for</code></strong>, <code>form</code></td>
+<td style="text-align:left">a caption for a form control</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>&lt;select&gt;</code></td>
+<td style="text-align:left"><code>name</code>, <code>form</code>, <code>required</code>, <code>autofocus</code>, <code>disable</code>, <strong><code>multiple</code></strong></td>
+<td style="text-align:left">a control for selecting among a list of options</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>&lt;option&gt;</code></td>
+<td style="text-align:left"><strong><code>label</code></strong>, <strong><code>value</code></strong>, <code>disable</code>, <strong><code>selected</code></strong></td>
+<td style="text-align:left">an option in a select control</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>&lt;fieldset&gt;</code></td>
+<td style="text-align:left"><code>name</code>, <code>form</code>, <code>disable</code></td>
+<td style="text-align:left">grouping things</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>&lt;legend&gt;</code></td>
+<td style="text-align:left">global attribute</td>
+<td style="text-align:left">giving a title</td>
+</tr>
+</tbody>
+</table>
+<h3 id="form">■ form element</h3>
+
+<h4 id="Syntax"><a href="#Syntax" class="headerlink" title="Syntax"></a>Syntax</h4><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">form</span> <span class="attr">action</span>=<span class="string">"url"</span> <span class="attr">method</span>=<span class="string">"get/post"</span> <span class="attr">enctype</span>=<span class="string">""</span> /&gt;</span></div><div class="line">  some forms elements.</div><div class="line"><span class="tag">&lt;/<span class="name">form</span>&gt;</span></div></pre></td></tr></table></figure>
+<h4 id="Attributes"><a href="#Attributes" class="headerlink" title="Attributes"></a>Attributes</h4><p>method</p>
+<table><tr><th width="30%" style="text-align: center">method</th><th style="text-align: center">feature</th></tr><tr><td style="text-align: center">get</td><td><ol><li>数据提交后显示在url上（不安全）；</li><li>字符有限制，不能提交大文件。</li></ol></td></tr><tr><td style="text-align: center">post</td><td><ol><li>数据提交后不显示在url上（安全）；</li><li>可提交大文件，如images，video，file等；</li><li> <code>&lt;form&gt;</code>必须有<code>enctype</code>attribute。</li></ol></td></tr></table>
+
+<p>enctype(update later)</p>
+<h3 id="input">■ input element</h3>
+
+<h4 id="Syntax-1"><a href="#Syntax-1" class="headerlink" title="Syntax"></a>Syntax</h4><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">name</span>=<span class="string">"name identifier"</span> /&gt;</span></div><div class="line"><span class="comment">&lt;!-- It's a empty element, self-closing tags --&gt;</span></div></pre></td></tr></table></figure>
+<h4 id="Attributes-1"><a href="#Attributes-1" class="headerlink" title="Attributes"></a>Attributes</h4><p><strong>type</strong></p>
+<p><code>type=&quot;&quot;</code>类型下通用attribute。</p>
+<table>
+<thead>
+<tr>
+<th>non-boolean attribute</th>
+<th>boolean attribute</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>name</code>: the name part of name/value pair <br><code>value</code>: preinput a value <br><code>placeholder</code>: add an information to help user understand what to input<br><code>form</code>: the value of id attribute in <code>&lt;form&gt;</code> element</td>
+<td><code>required</code><br><code>disable</code><br><code>autofocus</code><br><code>readonly</code></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">parent element</th>
+<th style="text-align:left">child element</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>&lt;form&gt;</code><br><code>&lt;label&gt;</code>:<br>or any<br>or none</td>
+<td style="text-align:left">none</td>
+</tr>
+</tbody>
+</table>
+<p>有特例的将在下面单独的type类型中提出。</p>
+<h5 id="▶︎-type-”text”"><a href="#▶︎-type-”text”" class="headerlink" title="▶︎ type=”text”"></a>▶︎ type=”text”</h5><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">name</span>=<span class="string">""</span> <span class="attr">value</span>=<span class="string">""</span> /&gt;</span></div></pre></td></tr></table></figure>
+<p><em>note:</em><br>- Text is the default value of type attribute.<br>- Value attribute is optional.</p>
+<h5 id="▶︎-type-”radio-checkbox”"><a href="#▶︎-type-”radio-checkbox”" class="headerlink" title="▶︎ type=”radio/checkbox”"></a>▶︎ type=”radio/checkbox”</h5><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"radio"</span> <span class="attr">name</span>=<span class="string">"radio name"</span> <span class="attr">value</span>=<span class="string">"radio value"</span> <span class="attr">checked</span> /&gt;</span></div></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"checkbox"</span> <span class="attr">name</span>=<span class="string">"checkbox name"</span> <span class="attr">value</span>=<span class="string">"checkbox value"</span> <span class="attr">checked</span> /&gt;</span></div></pre></td></tr></table></figure>
+<table>
+<thead>
+<tr>
+<th>non-boolean attribute</th>
+<th>boolean attribute</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>⌦ <del><code>placeholder</code></del></td>
+<td><strong><code>checked</code></strong>: option is selected by default.<br>⌦ <del><code>readonly</code></del></td>
+</tr>
+</tbody>
+</table>
+<p><em>note</em>:<br>- Value attribute is optional.<br>- Related multiple radio-input/checkbox-input element must have <strong>same name attribute’s value</strong>.<br>eg:<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"radio"</span> <span class="attr">name</span>=<span class="string">"color"</span> <span class="attr">value</span>=<span class="string">"red"</span> /&gt;</span>red</div><div class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"radio"</span> <span class="attr">name</span>=<span class="string">"color"</span> <span class="attr">value</span>=<span class="string">"yellow"</span> /&gt;</span>yellow</div><div class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"radio"</span> <span class="attr">name</span>=<span class="string">"color"</span> <span class="attr">value</span>=<span class="string">"blue"</span> /&gt;</span>blue</div><div class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"checkbox"</span> <span class="attr">name</span>=<span class="string">"fruit"</span> <span class="attr">value</span>=<span class="string">"orange"</span> /&gt;</span>orange</div><div class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"checkbox"</span> <span class="attr">name</span>=<span class="string">"fruit"</span> <span class="attr">value</span>=<span class="string">"apple"</span> /&gt;</span>apple</div><div class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"checkbox"</span> <span class="attr">name</span>=<span class="string">"fruit"</span> <span class="attr">value</span>=<span class="string">"pear"</span> /&gt;</span>pear</div></pre></td></tr></table></figure></p>
+<h5 id="▶︎-type-”button”"><a href="#▶︎-type-”button”" class="headerlink" title="▶︎ type=”button”"></a>▶︎ type=”button”</h5><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"button"</span> <span class="attr">name</span>=<span class="string">""</span> <span class="attr">value</span>=<span class="string">"click me"</span> <span class="attr">disabled</span>/&gt;</span></div></pre></td></tr></table></figure>
+<table>
+<thead>
+<tr>
+<th>non-boolean attribute</th>
+<th>boolean attribute</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>⌦ <del><code>placeholder</code></del></td>
+<td>⌦ <del><code>required</code></del><br>⌦ <del><code>readonly</code></del></td>
+</tr>
+</tbody>
+</table>
+<p><em>note</em>:<br>- It represents a button with no additional semantics.<br>- It has been replaced by <code>&lt;button&gt;</code> element in HTML5.<br>- Value attribute <strong>must</strong> be non-empty.</p>
+<h5 id="▶︎-type-”password”"><a href="#▶︎-type-”password”" class="headerlink" title="▶︎ type=”password”"></a>▶︎ type=”password”</h5><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"password"</span> <span class="attr">name</span>=<span class="string">"psw"</span> /&gt;</span></div></pre></td></tr></table></figure>
+<p><em>note</em>:<br>- For the sake of security, when use password-input element, <code>&lt;form&gt;</code> element <strong>must</strong> have attribute <code>method=&quot;post&quot;</code>.</p>
+<h5 id="▶︎-type-”submit”"><a href="#▶︎-type-”submit”" class="headerlink" title="▶︎ type=”submit”"></a>▶︎ type=”submit”</h5><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"submit"</span> <span class="attr">name</span>=<span class="string">""</span> <span class="attr">value</span>=<span class="string">"submit"</span> <span class="attr">form</span>=<span class="string">"form id"</span> <span class="attr">disabled</span> <span class="attr">autofocus</span> /&gt;</span></div></pre></td></tr></table></figure>
+<table>
+<thead>
+<tr>
+<th>non-boolean attribute</th>
+<th>boolean attribute</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>⌦ <del><code>placeholder</code></del></td>
+<td>⌦ <del><code>required</code></del><br>⌦ <del><code>readonly</code></del></td>
+</tr>
+</tbody>
+</table>
+<h5 id="▶︎-type-”file”"><a href="#▶︎-type-”file”" class="headerlink" title="▶︎ type=”file”"></a>▶︎ type=”file”</h5><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"file"</span> <span class="attr">name</span>=<span class="string">""</span> <span class="attr">form</span>=<span class="string">"form id"</span> <span class="attr">accept</span>=<span class="string">".png"</span> <span class="attr">multiple</span> <span class="attr">required</span> <span class="attr">disabled</span> <span class="attr">autofocus</span> /&gt;</span></div></pre></td></tr></table></figure>
+<table>
+<thead>
+<tr>
+<th>non-boolean attribute</th>
+<th>boolean attribute</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong><code>accept</code></strong>: provide the MIME type which server is able to accept.<br>⌦ <del><code>value</code></del><br>⌦ <del><code>placeholder</code></del></td>
+<td><strong><code>multiple</code></strong><br>⌦ <del><code>readonly</code></del></td>
+</tr>
+</tbody>
+</table>
+<p><em>note</em>:<br>- Becuase <code>file</code> has big transmission, <code>&lt;form&gt;</code> element <strong>must</strong> have attribute <code>method=&quot;post&quot;</code> and <code>enctype=&quot;&quot;</code>.</p>
+<h5 id="▶︎-type-”number”"><a href="#▶︎-type-”number”" class="headerlink" title="▶︎ type=”number”"></a>▶︎ type=”number”</h5><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"number"</span> <span class="attr">max</span>=<span class="string">"100"</span> <span class="attr">min</span>=<span class="string">"10"</span> <span class="attr">step</span>=<span class="string">"1"</span> <span class="attr">placeholder</span>=<span class="string">"50"</span> <span class="attr">name</span>=<span class="string">""</span> <span class="attr">value</span>=<span class="string">""</span> <span class="attr">form</span>=<span class="string">"form id"</span> <span class="attr">required</span> <span class="attr">disabled</span> <span class="attr">autofocus</span> <span class="attr">readonly</span> /&gt;</span></div></pre></td></tr></table></figure>
+<table>
+<thead>
+<tr>
+<th>non-boolean attribute</th>
+<th>boolean attribute</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong><code>max</code></strong><br><strong><code>min</code></strong><br><strong><code>step</code></strong></td>
+<td>no info</td>
+</tr>
+</tbody>
+</table>
+<h5 id="▶︎-type-”range”"><a href="#▶︎-type-”range”" class="headerlink" title="▶︎ type=”range”"></a>▶︎ type=”range”</h5><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"range"</span> <span class="attr">max</span>=<span class="string">"100"</span> <span class="attr">min</span>=<span class="string">"10"</span> <span class="attr">step</span>=<span class="string">"10"</span> <span class="attr">name</span>=<span class="string">""</span> <span class="attr">value</span>=<span class="string">"50"</span> <span class="attr">form</span>=<span class="string">"form id"</span> <span class="attr">disabled</span> <span class="attr">autofocus</span> /&gt;</span></div><div class="line"><span class="comment">&lt;!-- value attribute here represents the initial range number--&gt;</span></div></pre></td></tr></table></figure>
+<table>
+<thead>
+<tr>
+<th>non-boolean attribute</th>
+<th>boolean attribute</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong><code>max</code></strong><br><strong><code>min</code></strong><br><strong><code>step</code></strong><br>⌦ <del><code>placeholder</code></del></td>
+<td>⌦ <del><code>required</code></del><br>⌦ <del><code>readonly</code></del></td>
+</tr>
+</tbody>
+</table>
+<h5 id="▶︎-type-”date-month-time-week”"><a href="#▶︎-type-”date-month-time-week”" class="headerlink" title="▶︎ type=”date/month/time/week”"></a>▶︎ type=”date/month/time/week”</h5><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"date/month/time/week"</span> <span class="attr">max</span>=<span class="string">"date/month/time/week"</span> <span class="attr">min</span>=<span class="string">""</span> <span class="attr">step</span>=<span class="string">""</span> <span class="attr">name</span>=<span class="string">""</span> <span class="attr">value</span>=<span class="string">"date/month/time/week"</span> <span class="attr">form</span>=<span class="string">"form id"</span> <span class="attr">required</span> <span class="attr">disabled</span> <span class="attr">autofocus</span> <span class="attr">readonly</span> /&gt;</span></div></pre></td></tr></table></figure>
+<table>
+<thead>
+<tr>
+<th>non-boolean attribute</th>
+<th>boolean attribute</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong><code>max</code></strong><br><strong><code>min</code></strong><br><strong><code>step</code></strong><br>⌦ <del><code>placeholder</code></del></td>
+<td>no info</td>
+</tr>
+</tbody>
+</table>
+<h5 id="▶︎-type-”color”"><a href="#▶︎-type-”color”" class="headerlink" title="▶︎ type=”color”"></a>▶︎ type=”color”</h5><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"color"</span> <span class="attr">name</span>=<span class="string">""</span> <span class="attr">value</span>=<span class="string">"#ffffff"</span> <span class="attr">form</span>=<span class="string">"form id"</span> <span class="attr">disabled</span> <span class="attr">autofocus</span> /&gt;</span></div><div class="line"><span class="comment">&lt;!-- value attribute here can't use color keywords such as red. --&gt;</span></div></pre></td></tr></table></figure>
+<table>
+<thead>
+<tr>
+<th>non-boolean attribute</th>
+<th>boolean attribute</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>no info</td>
+<td>⌦ <del><code>required</code></del><br>⌦ <del><code>readonly</code></del></td>
+</tr>
+</tbody>
+</table>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/cheatsheet/" rel="tag">#cheatsheet</a>
+          
+            <a href="/tags/html/" rel="tag">#html</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/posts/20160826-html-common-elements.html" rel="next" title="HTML Cheatsheet: Common Elements">
+                <i class="fa fa-chevron-left"></i> HTML Cheatsheet: Common Elements
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/posts/20160903-html-css-javascript-week1-note.html" rel="prev" title="课程《HTML,CSS&JavaScript》week1作业笔记">
+                课程《HTML,CSS&JavaScript》week1作业笔记 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="posts/20160827-html-forms-elements.html"
+           data-title="HTML Cheatsheet: Forms" data-url="http://penggeyao.me/posts/20160827-html-forms-elements.html">
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/portrait-grey.jpg"
+               alt="penggeayo" />
+          <p class="site-author-name" itemprop="name">penggeayo</p>
+          <p class="site-description motion-element" itemprop="description">If you believe it, then do it.</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">13</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">13</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#List-of-forms-elements"><span class="nav-number">1.</span> <span class="nav-text">List of forms elements</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#form"><span class="nav-number">1.1.</span> <span class="nav-text">■ form element</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Syntax"><span class="nav-number">1.1.1.</span> <span class="nav-text">Syntax</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Attributes"><span class="nav-number">1.1.2.</span> <span class="nav-text">Attributes</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#input"><span class="nav-number">1.2.</span> <span class="nav-text">■ input element</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Syntax-1"><span class="nav-number">1.2.1.</span> <span class="nav-text">Syntax</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Attributes-1"><span class="nav-number">1.2.2.</span> <span class="nav-text">Attributes</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#▶︎-type-”text”"><span class="nav-number">1.2.2.1.</span> <span class="nav-text">▶︎ type=”text”</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#▶︎-type-”radio-checkbox”"><span class="nav-number">1.2.2.2.</span> <span class="nav-text">▶︎ type=”radio/checkbox”</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#▶︎-type-”button”"><span class="nav-number">1.2.2.3.</span> <span class="nav-text">▶︎ type=”button”</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#▶︎-type-”password”"><span class="nav-number">1.2.2.4.</span> <span class="nav-text">▶︎ type=”password”</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#▶︎-type-”submit”"><span class="nav-number">1.2.2.5.</span> <span class="nav-text">▶︎ type=”submit”</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#▶︎-type-”file”"><span class="nav-number">1.2.2.6.</span> <span class="nav-text">▶︎ type=”file”</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#▶︎-type-”number”"><span class="nav-number">1.2.2.7.</span> <span class="nav-text">▶︎ type=”number”</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#▶︎-type-”range”"><span class="nav-number">1.2.2.8.</span> <span class="nav-text">▶︎ type=”range”</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#▶︎-type-”date-month-time-week”"><span class="nav-number">1.2.2.9.</span> <span class="nav-text">▶︎ type=”date/month/time/week”</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#▶︎-type-”color”"><span class="nav-number">1.2.2.10.</span> <span class="nav-text">▶︎ type=”color”</span></a></li></ol></li></ol></li></ol></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">penggeayo</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Muse
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"penggeyao-notes"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+    <script src="/vendors/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+    <script src="/js/src/hook-duoshuo.js"></script>
+  
+
+
+
+
+
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
