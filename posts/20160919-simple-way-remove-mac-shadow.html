@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="mac," />
 
 
 
@@ -84,15 +84,25 @@
 
 
 
-<meta name="description" content="If you believe it, then do it.">
-<meta property="og:type" content="website">
-<meta property="og:title" content="彭个瑶.ME">
-<meta property="og:url" content="http://penggeyao.me/tags/英语/index.html">
+<meta name="description" content="非常简单，打开终端后，只需两行代码：
+1: 关闭shadow1defaults write com.apple.screencapture disable-shadow -bool true
+2: 重启UI服务">
+<meta property="og:type" content="article">
+<meta property="og:title" content="简单两步去除mac截图阴影">
+<meta property="og:url" content="http://penggeyao.me/posts/20160919-simple-way-remove-mac-shadow.html">
 <meta property="og:site_name" content="彭个瑶.ME">
-<meta property="og:description" content="If you believe it, then do it.">
+<meta property="og:description" content="非常简单，打开终端后，只需两行代码：
+1: 关闭shadow1defaults write com.apple.screencapture disable-shadow -bool true
+2: 重启UI服务">
+<meta property="og:image" content="http://penggeyao.me/images/160919-ScreenShotShadow1.png">
+<meta property="og:image" content="http://penggeyao.me/images/160919-ScreenShotShadow2.png">
+<meta property="og:updated_time" content="2016-09-19T11:59:55.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="彭个瑶.ME">
-<meta name="twitter:description" content="If you believe it, then do it.">
+<meta name="twitter:title" content="简单两步去除mac截图阴影">
+<meta name="twitter:description" content="非常简单，打开终端后，只需两行代码：
+1: 关闭shadow1defaults write com.apple.screencapture disable-shadow -bool true
+2: 重启UI服务">
+<meta name="twitter:image" content="http://penggeyao.me/images/160919-ScreenShotShadow1.png">
 
 
 
@@ -113,9 +123,9 @@
 
 
 
-  <link rel="canonical" href="http://penggeyao.me/tags/英语/"/>
+  <link rel="canonical" href="http://penggeyao.me/posts/20160919-simple-way-remove-mac-shadow.html"/>
 
-  <title> 标签: 英语 | 彭个瑶.ME </title>
+  <title> 简单两步去除mac截图阴影 | 彭个瑶.ME </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -146,7 +156,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-right  ">
+  <div class="container one-collumn sidebar-position-right page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -234,46 +244,159 @@
           <div id="content" class="content">
             
 
-  <div id="posts" class="posts-collapse">
-    <div class="collection-title">
-      <h2 >
-        英语
-        <small>标签</small>
-      </h2>
-    </div>
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
 
     
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                简单两步去除mac截图阴影
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-09-19T19:41:47+08:00" content="2016-09-19">
+              2016-09-19
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/电脑tips/" itemprop="url" rel="index">
+                    <span itemprop="name">电脑tips</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/posts/20160919-simple-way-remove-mac-shadow.html#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="posts/20160919-simple-way-remove-mac-shadow.html" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
       
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+      
+        <p>非常简单，打开终端后，只需两行代码：</p>
+<p>1: 关闭shadow<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">defaults write com.apple.screencapture disable-shadow -bool true</div></pre></td></tr></table></figure></p>
+<p>2: 重启UI服务 <a id="more"></a></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">killall SystemUIServer</div></pre></td></tr></table></figure>
+<p>效果如图：<br><img src="/images/160919-ScreenShotShadow1.png" alt="no shadow"></p>
+<p>但是，我突然改变了注意，又想打开shadow怎么办？</p>
+<p>超级简单，也是两步：</p>
+<p>1: 打开shadow, true改为false<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">defaults write com.apple.screencapture disable-shadow -bool false</div></pre></td></tr></table></figure></p>
+<p>2: 同样重启UI服务</p>
+<p>效果如图：<br><img src="/images/160919-ScreenShotShadow2.png" alt="with shadow"></p>
+<p>随便哪种，任君挑选。</p>
+<p>本来想去除所有window的shadow的，但是没有找到办法。求告知。</p>
 
-      <h1 class="post-title">
+      
+    </div>
+
+    <div>
+      
         
-            <a class="post-title-link" href="/posts/20160816-summary-of-doing-the-english-morning-reading.html" itemprop="url">
-              
-                <span itemprop="name">英语学习项目清晨朗读会之两月半总结</span>
-              
-            </a>
+
+      
+    </div>
+
+    <div>
+      
         
-      </h1>
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2016-08-16T19:01:30+08:00"
-              content="2016-08-16" >
-          08-16
-        </time>
-      </div>
+      
+    </div>
 
-    </header>
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/mac/" rel="tag">#mac</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/posts/20160918-html-css-javascript-week3-note.html" rel="next" title="课程《HTML,CSS&JavaScript》week3作业笔记">
+                <i class="fa fa-chevron-left"></i> 课程《HTML,CSS&JavaScript》week3作业笔记
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </article>
 
 
-    
-  </div>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -281,6 +404,14 @@
 
 
           
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="posts/20160919-simple-way-remove-mac-shadow.html"
+           data-title="简单两步去除mac截图阴影" data-url="http://penggeyao.me/posts/20160919-simple-way-remove-mac-shadow.html">
+      </div>
+    
+  </div>
+
 
         </div>
         
@@ -300,8 +431,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/portrait-grey.jpg"
@@ -351,6 +491,17 @@
 
       </section>
 
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <p class="post-toc-empty">此文章未包含目录</p>
+            
+          </div>
+        </section>
       
 
     </div>
@@ -447,6 +598,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
 
   
 
