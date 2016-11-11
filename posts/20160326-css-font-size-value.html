@@ -1,0 +1,748 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="css," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
+
+
+
+
+
+
+<meta name="description" content="Valuepxpx是固定值，不过针对于显示器的小点来说，也可以算是相对值。浏览器默认font-size为16px。
+emem是相对值，它是倍数关系。当浏览器的默认font-size=16px时，16px=1em。当浏览器的默认font-size=20px时，20px=1em。
+%%是相对值，相对于父元素的font-size值。比如，父元素的font-size=16px，子元素设置了font-siz">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CSS:font-size value: px em %">
+<meta property="og:url" content="http://penggeyao.me/posts/20160326-css-font-size-value.html">
+<meta property="og:site_name" content="彭个瑶.ME">
+<meta property="og:description" content="Valuepxpx是固定值，不过针对于显示器的小点来说，也可以算是相对值。浏览器默认font-size为16px。
+emem是相对值，它是倍数关系。当浏览器的默认font-size=16px时，16px=1em。当浏览器的默认font-size=20px时，20px=1em。
+%%是相对值，相对于父元素的font-size值。比如，父元素的font-size=16px，子元素设置了font-siz">
+<meta property="og:image" content="http://7xsg1m.com1.z0.glb.clouddn.com/font-demo1.png">
+<meta property="og:updated_time" content="2016-11-11T05:17:58.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="CSS:font-size value: px em %">
+<meta name="twitter:description" content="Valuepxpx是固定值，不过针对于显示器的小点来说，也可以算是相对值。浏览器默认font-size为16px。
+emem是相对值，它是倍数关系。当浏览器的默认font-size=16px时，16px=1em。当浏览器的默认font-size=20px时，20px=1em。
+%%是相对值，相对于父元素的font-size值。比如，父元素的font-size=16px，子元素设置了font-siz">
+<meta name="twitter:image" content="http://7xsg1m.com1.z0.glb.clouddn.com/font-demo1.png">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Mist',
+    sidebar: {"position":"right","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: '博主'
+    }
+  };
+</script>
+
+
+
+
+  <link rel="canonical" href="http://penggeyao.me/posts/20160326-css-font-size-value.html"/>
+
+  <title> CSS:font-size value: px em % | 彭个瑶.ME </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?d3bc5408f1fc7191eacfc1ebe685e83c";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-right page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">彭个瑶.ME</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle"></p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                CSS:font-size value: px em %
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-03-26T11:16:35+08:00" content="2016-03-26">
+              2016-03-26
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/technotes/" itemprop="url" rel="index">
+                    <span itemprop="name">技术笔记</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/posts/20160326-css-font-size-value.html#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="posts/20160326-css-font-size-value.html" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="Value"><a href="#Value" class="headerlink" title="Value"></a>Value</h2><h3 id="px"><a href="#px" class="headerlink" title="px"></a>px</h3><p>px是固定值，不过针对于显示器的小点来说，也可以算是相对值。<br>浏览器默认font-size为16px。</p>
+<h3 id="em"><a href="#em" class="headerlink" title="em"></a>em</h3><p>em是相对值，它是倍数关系。当浏览器的默认font-size=16px时，16px=1em。当浏览器的默认font-size=20px时，20px=1em。</p>
+<h3 id=""><a href="#" class="headerlink" title="%"></a>%</h3><p>%是相对值，相对于父元素的font-size值。比如，父元素的font-size=16px，子元素设置了font-size=200%，则子元素的字号为16px * 200%=32px。</p>
+<h2 id="px和em的换算"><a href="#px和em的换算" class="headerlink" title="px和em的换算"></a>px和em的换算</h2><p>主要是把px换算成em，这样做是因为em是相对值，能够在不同分辨率的情况下自适应字体大小。<br>换算公式为：</p>
+<pre><code>px/16=em
+</code></pre><p>px指想要的px具体值，如16px，24px，32px等。<br>16指当前的计算标准，即父元素的font-size值，不一定就是16px，而是看最近的父元素的字号是多少。<br>那么，就可以换算出当想要的px值是16px，父元素的字号也是16px时，等价的em值为：</p>
+<pre><code>16px/16=1em
+</code></pre><p>同理：</p>
+<table>
+<thead>
+<tr>
+<th>想要的px值</th>
+<th>父元素字号</th>
+<th>等价的em值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>14px</td>
+<td>16</td>
+<td>14px/16=0.875em</td>
+</tr>
+<tr>
+<td>10px</td>
+<td>16</td>
+<td>10px/16=0.625em</td>
+</tr>
+<tr>
+<td>14px</td>
+<td>14</td>
+<td>14px/14=1em</td>
+</tr>
+<tr>
+<td>10px</td>
+<td>14</td>
+<td>10px/14=0.714em</td>
+</tr>
+</tbody>
+</table>
+<p>反过来，知道了em值，知道了父元素的字号，就可以倒算回等价的px值，如：</p>
+<pre><code>1em*16=16px
+</code></pre><h2 id="px、em、-三者之间的换算应用"><a href="#px、em、-三者之间的换算应用" class="headerlink" title="px、em、%三者之间的换算应用"></a>px、em、%三者之间的换算应用</h2><p>以给<code>&lt;body&gt;</code>设置css：<code>body{font-size:62.5%}</code>为例。</p>
+<p>之前遇到了字体无法自适应的问题，网上搜了解决方法，就是将<code>&lt;body&gt;</code>字号设为62.5%，然后此时的1em正好等于10px，便于px与em之间的换算。那么62.5%是怎么来的呢？</p>
+<p>看之前上面那个表格的第三行就知道了，10px/16=0.625em。但是这个推理过程慢慢来看：</p>
+<p>首先，我们的目的是要让换算标准为10，因为当换算标准为10的时候，意味着14px=14px/10=1.4em，26px=26px/10=2.6em，这样把px换算成em就非常方便，心算就能出来了。<br>其次，怎样使换算标准为10？上面说到，<strong>换算标准就是父元素的字号</strong>，我们要应用到整个页面字体，此时最大的父元素就是<code>&lt;body&gt;</code>，也就是<code>&lt;body&gt;</code>的字号应该是换算标准，所以它应该是10px。我们又知道，浏览器的默认字号为16px，所以浏览器的字号是继承给<code>&lt;body&gt;</code>的，我们又知道，<strong>元素字号的百分比值是根据父元素的字号来乘以该百分比的</strong>，即<code>&lt;body&gt;</code>的字号应该是：浏览器字号16px*百分比=10px，这样，这个百分比=10px/16px=62.5%。即<code>body{font-size:62.5%}</code>。</p>
+<p>根据这个结论，我们来顺着验证下：</p>
+<table>
+<thead>
+<tr>
+<th>序号</th>
+<th>子元素</th>
+<th>父元素</th>
+<th>子元素的字号值换算</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>第一步</td>
+<td>body</td>
+<td>浏览器</td>
+<td>百分比与px的换算</td>
+</tr>
+<tr>
+<td>字号值</td>
+<td>62.5%</td>
+<td>16px</td>
+<td>body：62.5%*16px=10px</td>
+</tr>
+<tr>
+<td>第二步</td>
+<td>div</td>
+<td>body</td>
+<td>px与em的换算</td>
+</tr>
+<tr>
+<td>字号值</td>
+<td>16px</td>
+<td>10px（由上一步得到）</td>
+<td>div：16px/10=1.6em</td>
+</tr>
+</tbody>
+</table>
+<p>这样就最终达成了所有子元素与父元素字号px和em之间的换算标准为10。这样我们再来重新理解一下这个css设置<code>body:{font-size:62.5%}</code>，它其实是把整个内容字体缩小到62.5%，再根据em的倍数来进行放大到合适的px值。比如，本来是16px，现在缩小62.5%变成了10px，但是我们还是想要16px，于是又把10px放大1.6倍（em）变成了16px。为什么要经过62.5%这道中间程序，完全是为了得到10这个换算标准，便于计算而已。</p>
+<p>然而，它有一个大问题：这个设置能使所有的计算标准都为10px吗？<br>来看例子css：<br><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&lt;style type="text/css"&gt;</div><div class="line">body &#123;font-size:62.5%;&#125;</div><div class="line">.px16 &#123;font-size:1.6em&#125;</div><div class="line">.px25point6 &#123;font-size:1.6em;&#125;</div><div class="line">&lt;/style&gt;</div></pre></td></tr></table></figure></p>
+<p>例子html：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"px16"</span>&gt;</span></div><div class="line">    我的字号是16px：16px*62.5%*1.6em=16px</div><div class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"px25point6"</span>&gt;</span></div><div class="line">            我的字号是16px*1.6em=25.6px，因为我的父元素的字号是16px，所以我的计算标准是16px，而不是body的62.5%也就是10px。</div><div class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<p>效果图:<br><img src="http://7xsg1m.com1.z0.glb.clouddn.com/font-demo1.png" alt="font-demo.png"><br>问题出来了，当更深层嵌套的元素使用em时，它的计算标准是根据自己的上一级父元素的字号，而不是基于<code>&lt;body&gt;</code>的10px。而上一级父元素的字号已经不是10px了，可能是任何数值，那么此时要设置自适应的em，依旧需要公式：<strong>px/标准=em</strong>。<br>这样一来，为body设置<code>font-size:62.5%</code>以达到10px的计算标准来便于计算的目的并不是完整的解决了所有的计算。它的实用性被削弱了，还对不清楚的人造成了计算深层嵌套元素字号的混乱和麻烦。<br>因此，想设置自适应，不如老老实实的遵循最基本的原理，也就是这个公式：</p>
+<pre><code>px/父元素字号=em
+</code></pre><p>##以font-size的值为标准计算数值的属性<br>有些属性如<code>line-height</code>,<code>text-indent</code>，当它们本身的值的单位为<code>em</code>时，就需要根据元素的<code>font-size</code>值为基础计算。</p>
+<p>有两种情况:</p>
+<p>###当元素的font-size为固定值px时<br>如：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">div</span> &#123;</div><div class="line">    <span class="attribute">font-size</span>:<span class="number">16px</span>;</div><div class="line">    <span class="attribute">line-height</span>:<span class="number">2em</span>;</div><div class="line">    <span class="attribute">text-indent</span>:<span class="number">2em</span>;</div><div class="line">    &#125;</div></pre></td></tr></table></figure>
+<p>div的line-height=16px<em>2=32px；<br>div的text-indent=16px</em>2=32px。</p>
+<h3 id="当元素的font-size为相对值em时"><a href="#当元素的font-size为相对值em时" class="headerlink" title="当元素的font-size为相对值em时"></a>当元素的font-size为相对值em时</h3><p>如：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">div</span> &#123;</div><div class="line">    <span class="attribute">font-size</span>:<span class="number">2em</span>;</div><div class="line">    <span class="attribute">line-height</span>:<span class="number">2em</span>;</div><div class="line">    <span class="attribute">text-indent</span>:<span class="number">2em</span>;</div><div class="line">    &#125;</div></pre></td></tr></table></figure>
+<p>首先，计算div的font-size=父元素字号设16px<em>2=32px；<br>然后，计算div的的line-height=32px</em>2=64px；<br>同理，计算div的text-indent=32px*2=64px。</p>
+<h2 id="line-height的value换算问题"><a href="#line-height的value换算问题" class="headerlink" title="line-height的value换算问题"></a>line-height的value换算问题</h2><h3 id="value为em或-时"><a href="#value为em或-时" class="headerlink" title="value为em或%时"></a>value为em或%时</h3><p>元素的line-height的px值以本元素的font-size为标准计算，上一小节已经说到了。<br>此时，如果其子元素不单独设置line-height，该元素的line-height的值将继承给子元素，且 <strong>与子元素的font-size无关</strong>。<br><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">div</span>&#123;<span class="attribute">font-size</span>:<span class="number">10px</span>;<span class="attribute">line-height</span>:<span class="number">2em</span>;<span class="comment">/*或line-height：200%*/</span>&#125;</div><div class="line"><span class="selector-tag">div</span> <span class="selector-tag">p</span>&#123;<span class="attribute">font-size</span>:<span class="number">12px</span>;&#125;</div></pre></td></tr></table></figure></p>
+<p>此时，<code>&lt;p&gt;</code>的line-height=10px*2em（或200%）=20px。</p>
+<h3 id="value为系数（一个无单位的数值）时"><a href="#value为系数（一个无单位的数值）时" class="headerlink" title="value为系数（一个无单位的数值）时"></a>value为系数（一个无单位的数值）时</h3><p>元素的line-height的px值以本元素的font-size为计算标准。<br>但是，如果其子元素不单独设置line-height，该元素的line-height的系数将继承给子元素，且 <strong>与子元素的font-size有关</strong>。<br>如：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">div</span>&#123;<span class="attribute">font-size</span>:<span class="number">10px</span>;<span class="attribute">line-height</span>:<span class="number">2</span>;&#125;</div><div class="line"><span class="selector-tag">div</span> <span class="selector-tag">p</span>&#123;<span class="attribute">font-size</span>:<span class="number">12px</span>;&#125;</div></pre></td></tr></table></figure>
+<p>此时，<code>&lt;p&gt;</code>的line-height=12px*2=24px。</p>
+<p>以上两种情况，当子元素单独设置了line-height时，回到那句话：</p>
+<blockquote>
+<p><strong>元素的line-height的px值以本元素的font-size为计算标准。</strong></p>
+</blockquote>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/css/" rel="tag">#css</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/posts/20160318-css-vertical-center-align.html" rel="next" title="CSS:元素垂直居中对齐">
+                <i class="fa fa-chevron-left"></i> CSS:元素垂直居中对齐
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/posts/20160327-section-and-outlines-in-html5.html" rel="prev" title="section and outline in HTML5笔记整理">
+                section and outline in HTML5笔记整理 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="posts/20160326-css-font-size-value.html"
+           data-title="CSS:font-size value: px em %" data-url="http://penggeyao.me/posts/20160326-css-font-size-value.html">
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/portrait-grey.jpg"
+               alt="penggeayo" />
+          <p class="site-author-name" itemprop="name">penggeayo</p>
+          <p class="site-description motion-element" itemprop="description">If you believe it, then do it.</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">22</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">6</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">15</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Value"><span class="nav-number">1.</span> <span class="nav-text">Value</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#px"><span class="nav-number">1.1.</span> <span class="nav-text">px</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#em"><span class="nav-number">1.2.</span> <span class="nav-text">em</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#"><span class="nav-number">1.3.</span> <span class="nav-text">%</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#px和em的换算"><span class="nav-number">2.</span> <span class="nav-text">px和em的换算</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#px、em、-三者之间的换算应用"><span class="nav-number">3.</span> <span class="nav-text">px、em、%三者之间的换算应用</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#当元素的font-size为相对值em时"><span class="nav-number">3.1.</span> <span class="nav-text">当元素的font-size为相对值em时</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#line-height的value换算问题"><span class="nav-number">4.</span> <span class="nav-text">line-height的value换算问题</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#value为em或-时"><span class="nav-number">4.1.</span> <span class="nav-text">value为em或%时</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#value为系数（一个无单位的数值）时"><span class="nav-number">4.2.</span> <span class="nav-text">value为系数（一个无单位的数值）时</span></a></li></ol></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">penggeayo</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"penggeyao-notes"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+    <script src="/vendors/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+    <script src="/js/src/hook-duoshuo.js"></script>
+  
+
+
+
+
+
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
