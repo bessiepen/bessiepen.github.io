@@ -819,28 +819,12 @@
 
       
         
-          
-            <h2 id="什么是post、get"><a href="#什么是post、get" class="headerlink" title="什么是post、get"></a>什么是post、get</h2><p>GET/POST是在网页中提交form数据时的HTTP方法。</p>
-<p><strong>HTTP</strong>是超文本传输协议，用于客户端和服务器之间的通信，方式是客户端向服务器发出请求，服务器收到请求后向客户端返回响应。比如，在百度网页中写入关键字，点击搜索，那么浏览器这个客户端就向百度的服务器发送了一个包含关键字的网页搜索请求，服务器收到后把包含关键字的网页信息返回给客户端，页面上就显示了搜索后的结果。</p>
-<p>GET是从指定的资源上请求数据，如搜索。<br>POST是向指定的资源提交数据，如上传图片。<br>在form元素中，语法如下：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">form</span> <span class="attr">action</span>=<span class="string">"url"</span> <span class="attr">method</span>=<span class="string">"get/post"</span>&gt;</span> <span class="tag">&lt;/<span class="name">form</span>&gt;</span></div></pre></td></tr></table></figure></p>
-<h2 id="它们的区别有哪些呢？"><a href="#它们的区别有哪些呢？" class="headerlink" title="它们的区别有哪些呢？"></a>它们的区别有哪些呢？</h2><h4 id="字符串（名称-值对）的发送方式不同："><a href="#字符串（名称-值对）的发送方式不同：" class="headerlink" title="字符串（名称/值对）的发送方式不同："></a>字符串（名称/值对）的发送方式不同：</h4><p><strong>GET方式</strong>：将字符串（name/value）生成到URL中发送，以“？”连接URL和字符串，并列的字符串用”&amp;”连接，字符串的name和value用”=”连接，URL是form元素中action指向的值。格式为：</p>
-<blockquote>
-<p>test/demo_form.php?name1=value1&amp;name2=value2</p>
-</blockquote>
-<p><strong>POST方式</strong>：将字符串（name/value）生成到URL的head主体中包装发送，不会显示在URL中，格式为：</p>
-<blockquote>
-<p>   POST test/demo_form.php HTTP/1.1<br>    Host: 发送数据的网页<br>    name1=value1&amp;name2=value2</p>
-</blockquote>
-<h4 id="安全性不同："><a href="#安全性不同：" class="headerlink" title="安全性不同："></a>安全性不同：</h4><p>由于第一点的发送方式不同，GET的数据直接显示在URL中，是可见的，易泄露，所以敏感数据一定不能使用GET方式。<br>POST方式下将数据封装在URL的头部中，不可见，更安全。</p>
-<p>GET请求<strong>有缓存</strong>，能被存储到浏览器浏览历史中，能被保存为书签。<br>POST请求<strong>无缓存</strong>，不能被存储到浏览器浏览历史中，不能被保存为书签，数据不会保存在web服务器日志中。</p>
-<h4 id="字符及编码不同："><a href="#字符及编码不同：" class="headerlink" title="字符及编码不同："></a>字符及编码不同：</h4><p><strong>GET方法</strong>只能对<strong>ASCII字符集</strong>进行编码。编码类型为：<code>application/x-www-form-urlencode</code><br><strong>POST方法</strong>对字符类型<strong>无限制</strong>。编码类型为：<code>application/x-www-form-urlencode</code> 或者<code>multipart/form-data</code>。</p>
-<blockquote>
-<p><strong>注意:</strong> form中的enctype属性为multipart/form-data时，method只能使用POST值。</p>
-</blockquote>
-<h4 id="数据长度要求不同："><a href="#数据长度要求不同：" class="headerlink" title="数据长度要求不同："></a>数据长度要求不同：</h4><p>GET方法将数据生成到URL中，整个URL的长度不能超过<strong>2048</strong>个字符。<br>POST对数据长度<strong>无限制</strong>。所以，上传图片这样数据大的只能用POST方法。</p>
-<p>参考： <a href="http://www.runoob.com/tags/html-httpmethods.html" target="_blank" rel="external">http://www.runoob.com/tags/html-httpmethods.html</a></p>
-
-          
+          <h2 id="什么是post、get"><a href="#什么是post、get" class="headerlink" title="什么是post、get"></a>什么是post、get</h2><p>GET/POST是在网页中提交form数据时的HTTP方法。
+          <div class="post-more-link text-center">
+            <a class="btn" href="/posts/20160328-post-and-get-method.html#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
       
     </div>
@@ -957,109 +941,12 @@
 
       
         
-          
-            <p><strong>Outline</strong>:<br>html文档根据header的层级系统来向用户显示文档结构大纲，形成一个目录使用户能快速概览整体结构。大纲在html中的位置置于<code>&lt;body&gt;</code> <code>&lt;/body&gt;</code>之间。</p>
-<p><strong>Outline Algorithm</strong>:</p>
-<blockquote>
-<p>大纲算法允许用户代理(user agent)从一个web页面生成一个信息结构目录，让用户对页面有一个快速的概览。类似书籍、PDF、帮助文档等，都有一个清晰的目录结构，用户能方便的定位所需内容。一个良好结构的大纲，不仅是对于搜索引擎的优化，更是为借助于屏幕阅读器浏览网页的盲人（或弱视力）用户提供了巨大的帮助。<br>——<em><a href="http://cued.xunlei.com/log047" target="_blank" rel="external">七宝《HTML大纲算法对结构的影响》</a></em></p>
-</blockquote>
-<p><strong>Section（章节）</strong>:<br>在html4中，heading元素包含在一个章节中，指定了该章节的标题。<br>在html5中，需注意section不仅仅是指<code>&lt;setion&gt;</code>元素，所有在<code>&lt;body&gt;</code>元素内的内容都是section的一部分。</p>
-<h2 id="HTML4中的outline"><a href="#HTML4中的outline" class="headerlink" title="HTML4中的outline"></a>HTML4中的outline</h2><p>在html4中，文档结构主要依靠两个部分：<code>&lt;div&gt;</code>和heading元素（<code>&lt;h1&gt;</code>~<code>&lt;h6&gt;</code>）。<br>比如以下例子：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"section"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">h1</span>&gt;</span>outline<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>some text.<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"subsection"</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">h2</span>&gt;</span>outline in html4<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">p</span>&gt;</span>some text.<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure></p>
-<p>这段代码显示的结构就是：</p>
-<pre><code>1. outline
-1.1 outline in html4
-</code></pre><p>不过，用<code>&lt;div&gt;</code>来定义文档结构并不是强制性的。完全可以去掉<code>&lt;div&gt;</code>直接heading的层级来表达结构。<em>测试之后发现文档结构还是根据<code>&lt;h1&gt;</code>~<code>&lt;h6&gt;</code>来显示的，<code>&lt;div&gt;</code>并没有跳脱<code>&lt;h1&gt;</code>的束缚来自定义新的章节。</em>即当把上面第五行代码的<code>&lt;h2&gt;</code>改为<code>&lt;h1&gt;</code>后，标题<strong>outline in html4</strong>就和标题<strong>outline</strong>的层级一样了，而不在乎被<code>&lt;div&gt;</code>包裹在了标题<strong>outline</strong>的子元素中时应该低一层级。</p>
-<h3 id="html4中outline指定的问题"><a href="#html4中outline指定的问题" class="headerlink" title="html4中outline指定的问题"></a>html4中outline指定的问题</h3><p>既然html4中<code>&lt;div&gt;</code>并不能有效划分大纲层级，那么用html5中的<code>&lt;section&gt;</code>标签来解决<code>&lt;div&gt;</code>引起的语义歧义问题（它到底指的是章节还是仅仅为了应用样式而设置的一个块框？然而它就算指的是章节却并不能实现章节的语义。）就显得有点多此一举。其实应该这样理解，正因为<code>&lt;div&gt;</code>无法实现定义章节，定义子章节及其层级关系的使命，所以html5规定了<code>&lt;section&gt;</code>来做这件事。另外为更好的实现结构的层级关系，html5中的这些元素都有用：<code>&lt;article&gt;</code> <code>&lt;nav&gt;</code> <code>&lt;aside&gt;</code>。<strong><em>它们总是它们最近的父章节的子章节。</em></strong></p>
-<p>所有内容都是章节的一部分，但有些内容并不构成文档大纲，而是关乎网站，如导航栏，版权声明，logo，广告。html4中没有清晰的划分开这些部分，使它们都处于文档大纲中，造成了结构上的混乱。html5中用新的语义元素<code>&lt;header&gt;</code> <code>&lt;footer&gt;</code> <code>&lt;nav&gt;</code> <code>&lt;aside&gt;</code>分别归类了不属于主大纲的内容，解决了此问题。</p>
-<h2 id="HTML5中的outline-algorithm"><a href="#HTML5中的outline-algorithm" class="headerlink" title="HTML5中的outline algorithm"></a>HTML5中的outline algorithm</h2><h3 id="定义section"><a href="#定义section" class="headerlink" title="定义section"></a>定义section</h3><p>section的定义方式分为显性定义章节（explicitly defined）和隐性定义章节（implicitly defined）。显性定义章节如<code>&lt;article&gt;</code> <code>&lt;section&gt;</code> <code>&lt;footer&gt;</code> <code>&lt;header&gt;</code> <code>&lt;nav&gt;</code>等，它们都很明确的定义了一个章节。</p>
-<p>html5中章节都是可以嵌套的。</p>
-<p>比如以下例子：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">section</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">h1</span>&gt;</span>outline<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>some text.<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line"></div><div class="line">    <span class="tag">&lt;<span class="name">section</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">h1</span>&gt;</span>outline in html4<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">p</span>&gt;</span>some text.<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line"></div><div class="line">        <span class="tag">&lt;<span class="name">section</span>&gt;</span></div><div class="line">            <span class="tag">&lt;<span class="name">h1</span>&gt;</span>outline problems in html4<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></div><div class="line">            <span class="tag">&lt;<span class="name">p</span>&gt;</span>some text.<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line">        <span class="tag">&lt;/<span class="name">section</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">section</span>&gt;</span></div><div class="line"></div><div class="line">    <span class="tag">&lt;<span class="name">section</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">h1</span>&gt;</span>outline in html5<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">p</span>&gt;</span>some text.<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line"></div><div class="line">        <span class="tag">&lt;<span class="name">section</span>&gt;</span></div><div class="line">            <span class="tag">&lt;<span class="name">h1</span>&gt;</span>defining section<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></div><div class="line">            <span class="tag">&lt;<span class="name">p</span>&gt;</span>some text.<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line">        <span class="tag">&lt;/<span class="name">section</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">section</span>&gt;</span></div><div class="line"></div><div class="line">    <span class="tag">&lt;<span class="name">footer</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">p</span>&gt;</span>some text.<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">footer</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">section</span>&gt;</span></div></pre></td></tr></table></figure></p>
-<p>其结构为：</p>
-<pre><code>1. outline
-    1. outline in html4
-        1. outline problems in html4
-    2. outline in html5
-        1. defining section
-    3. section footer
-</code></pre><h3 id="定义标题"><a href="#定义标题" class="headerlink" title="定义标题"></a>定义标题</h3><p>从以上代码可以看出：</p>
-<ul>
-<li>所有的section可嵌套，如<code>&lt;footer&gt;</code>被嵌套到了<code>&lt;section&gt;</code>中。</li>
-<li><strong>section中的第一个heading tag决定了该section的标题</strong>，在一个section中只有<strong><em>一个</em></strong><code>&lt;h&gt;</code>标签时，不管<code>&lt;h&gt;</code>的层级是多少（1~6），它都只能代表当前section的层级。例如当以上代码中任何一个<code>&lt;h1&gt;</code>变为<code>&lt;h2&gt;</code>或其他<code>&lt;h3&gt;</code>~<code>&lt;h6&gt;</code>时，结构不发生改变。</li>
-<li>但是，当一个section中有多个<code>&lt;h&gt;</code>呢？当多个section中有多个<code>&lt;h&gt;</code>呢？这就要用到隐性分节。</li>
-</ul>
-<h3 id="隐性定义章节"><a href="#隐性定义章节" class="headerlink" title="隐性定义章节"></a>隐性定义章节</h3><p>隐性定义章节是<code>&lt;h&gt;</code>标签和<code>&lt;section&gt;</code>标签混合使用时会产生的一些情况，可能会解构原来的大纲结构，形成新的大纲。</p>
-<p>这里有一个规则：html5中是兼容了基于html4的<code>&lt;h&gt;</code>标签层级系统排列的。但又有所不同。在一个<code>&lt;section&gt;</code>的内部<code>&lt;h&gt;</code>如果不是第一个<code>&lt;h&gt;</code>，并且比它的排名小，不论小多少级，则会产生一个子章节。如：</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">section</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">h1</span>&gt;</span>outline in html4<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>some text.<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">h3</span>&gt;</span>outline problems in html4<span class="tag">&lt;/<span class="name">h3</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">section</span>&gt;</span></div></pre></td></tr></table></figure>
-<p>会显示：</p>
-<pre><code>1. outline in html4
-    1. outline problems in html4
-</code></pre><p>需要注意的是，当<code>&lt;h3&gt;</code>变为<code>&lt;h2&gt;</code>时，浏览器在样式上视觉上显示的是同等级别（问题：为什么？）：</p>
-<pre><code>1. outline in html4
-2. outline problems in html4
-</code></pre><p>但在测试outline的工具里看了后，大纲还是</p>
-<pre><code>1. outline in html4
-    1. outline problems in html4
-</code></pre><p>在一个<code>&lt;section&gt;</code>的内部<code>&lt;h&gt;</code>如果不是第一个<code>&lt;h&gt;</code>，但它的排名比第一个<code>&lt;h&gt;</code>大，则会开启一个新的章节，如</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">section</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">h3</span>&gt;</span>outline in html4<span class="tag">&lt;/<span class="name">h3</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>some text.<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">h2</span>&gt;</span>outline problems in html4<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">section</span>&gt;</span></div></pre></td></tr></table></figure>
-<p>其结构为：</p>
-<pre><code>1. outline in html4
-2. outline problems in html4
-</code></pre><p>事实上，只要当后一个<code>&lt;h&gt;</code>排名大于前一个<code>&lt;h&gt;</code>排名时，就会关闭之前的章节层级，而开始一个新的章节，这个新章节的层级依赖于<code>&lt;h&gt;</code>的排名和之前的哪一个相同，如：</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">section</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">h3</span>&gt;</span>outline in html4<span class="tag">&lt;/<span class="name">h3</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>some text.<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">h4</span>&gt;</span>outline problems in html4<span class="tag">&lt;/<span class="name">h4</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">h5</span>&gt;</span>problem 1<span class="tag">&lt;/<span class="name">h5</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">h5</span>&gt;</span>problem 1<span class="tag">&lt;/<span class="name">h5</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">h4</span>&gt;</span>outline in html5<span class="tag">&lt;/<span class="name">h4</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">section</span>&gt;</span></div></pre></td></tr></table></figure>
-<p>其结构为：</p>
-<pre><code>1. outline in html4
-    1. outline problems in html4
-        1. problem 1
-        2. problem 1
-    2. outline in html5
-</code></pre><p><code>&lt;h4&gt;outline in html5&lt;/h4&gt;</code>大于<code>&lt;h5&gt;</code>，但它新生成的章节层级和<code>&lt;h4&gt;outline problems in html4&lt;/h4&gt;</code>一样，而不是超越了<code>&lt;h4&gt;</code>。</p>
-<p>迷惑的：</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">h1</span>&gt;</span>outline<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">section</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">h3</span>&gt;</span>outline in html4<span class="tag">&lt;/<span class="name">h3</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>some text.<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">h1</span>&gt;</span>outline in html5<span class="tag">&lt;/<span class="name">h1</span>&gt;</span>     </div><div class="line"><span class="tag">&lt;/<span class="name">section</span>&gt;</span></div></pre></td></tr></table></figure>
-<p>为什么显示为：</p>
-<pre><code>1. outline
-    1. outline in html4
-    2. outline in html5
-</code></pre><p>而不是：</p>
-<pre><code>1. outline
-    1. outline in html4
-2. outline in html5
-</code></pre><p>当有多个section时，如<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">section</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">h1</span>&gt;</span>outline<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">section</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">h2</span>&gt;</span>outline in html4<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">p</span>&gt;</span>some text.<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">h3</span>&gt;</span>outline problems in html4<span class="tag">&lt;/<span class="name">h3</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">h1</span>&gt;</span>outline in html5<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">h3</span>&gt;</span>defining section<span class="tag">&lt;/<span class="name">h3</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">section</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;/<span class="name">section</span>&gt;</span></div></pre></td></tr></table></figure></p>
-<p>其结构为：</p>
-<pre><code>1. untitled section
-    1. outline
-        1. outline in html4
-            1. outline problems in html4
-        2. outline in html5
-            1. defining section
-</code></pre><p>需注意这里有一个untitled section，那是因为<strong>文档的标题是文档中<em>第一个</em>且<em>非节点元素</em>里的标题元素</strong>。相当于这里在第一个<code>&lt;section&gt;</code>前应该有一个非节点元素（<code>&lt;section&gt;</code> <code>&lt;article&gt;</code> 之外的，如<code>&lt;h&gt;</code> <code>&lt;footer&gt;</code>），来作为替换untitled section的标题。又比如：</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">section</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">h1</span>&gt;</span>我很想成为文档的标题可惜不能 I want to be the title but I couldn't<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">section</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">h6</span>&gt;</span>虽然我层级最小可是我是第一个出现的 I'm h6 but I come first<span class="tag">&lt;/<span class="name">h6</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">h1</span>&gt;</span>最大也没用顺序我还是在老6下面 I'm h1 but I come after h6<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></div></pre></td></tr></table></figure>
-<blockquote>
-<p>该例子引自<em><a href="http://cued.xunlei.com/log047" target="_blank" rel="external">七宝《HTML大纲算法对结构的影响》</a></em></p>
-</blockquote>
-<p>显示为：</p>
-<pre><code>1. 虽然我层级最小可是我是第一个出现的 I&apos;m h6 but I come first
-    1. 我很想成为文档的标题可惜不能 I want to be the title but I couldn&apos;t
-2. 最大也没用顺序我还是在老6下面 I&apos;m h1 but I come after h6
-</code></pre><p><strong>需要注意的是应该用显性分解来构造大纲，并且一个section中只定义一个<code>&lt;h&gt;</code>，当需要子章节时，再用<code>&lt;section&gt;</code>来进行嵌套</strong>。</p>
-<h3 id="分节根"><a href="#分节根" class="headerlink" title="分节根"></a>分节根</h3><p>这里有6个根节点：<br><code>&lt;body&gt;</code> <code>&lt;blockquote&gt;</code> <code>&lt;details&gt;</code> <code>&lt;fieldset&gt;</code> <code>&lt;figure&gt;</code> <code>&lt;td&gt;</code></p>
-<p>根节点可以拥有属于自己的大纲，但是这个大纲不会显示到父元素的大纲之中。如：</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">h1</span>&gt;</span>outline<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">section</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">h1</span>&gt;</span>outline in html4<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">blockquote</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">h1</span>&gt;</span>outline problems in html4<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">blockquote</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">h1</span>&gt;</span>outline in html5<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">section</span>&gt;</span></div></pre></td></tr></table></figure>
-<p>显示为：</p>
-<pre><code>1. outline
-    1. outline in html4
-    2. outline in html5
-</code></pre><h3 id="大纲外的节点元素"><a href="#大纲外的节点元素" class="headerlink" title="大纲外的节点元素"></a>大纲外的节点元素</h3><p><code>&lt;aside&gt;</code>元素：虽然和主元素相关，但并不属于主内容，它可以有自己的大纲，但不包括在主大纲之中。</p>
-<p><code>&lt;nav&gt;</code>元素：在一个文档之中可能有几个<code>&lt;nav&gt;</code>，比如一个是转换页码之间的链接，一个是全站的导航链接。这些链接都不属于主文档流和大纲中，它们往往不会最先被浏览器渲染。</p>
-<h3 id="Headers-and-Footers"><a href="#Headers-and-Footers" class="headerlink" title="Headers and Footers"></a>Headers and Footers</h3><p><code>&lt;article&gt;</code>,<code>&lt;section&gt;</code>,<code>&lt;aside&gt;</code>,<code>&lt;nav&gt;</code>都可以有它们自己的<code>&lt;header&gt;</code>和<code>&lt;footer&gt;</code>。</p>
-<h3 id="Addresses-in-sectioning-elements"><a href="#Addresses-in-sectioning-elements" class="headerlink" title="Addresses in sectioning elements"></a>Addresses in sectioning elements</h3><p>在html5中<code>&lt;address&gt;</code>元素得到了扩展。·、<code>&lt;address&gt;</code>元素指向的内容将链接到与它最近的那个<code>&lt;body&gt;</code>父元素或者<code>&lt;article&gt;</code>父元素。</p>
-<p>参考学习：</p>
-<ol>
-<li><a href="https://developer.mozilla.org/en-US/docs/Sections_and_Outlines_of_an_HTML5_document" target="_blank" rel="external">https://developer.mozilla.org/en-US/docs/Sections_and_Outlines_of_an_HTML5_document</a></li>
-<li><a href="http://cued.xunlei.com/log047" target="_blank" rel="external">http://cued.xunlei.com/log047</a></li>
-<li>outline tools online: <a href="https://gsnedders.html5.org/outliner/" target="_blank" rel="external">https://gsnedders.html5.org/outliner/</a></li>
-</ol>
-
-          
+          <p><strong>Outline</strong>:<br>html文档根据header的层级系统来向用户显示文档结构大纲，形成一个目录使用户能快速概览整体结构。大纲在html中的位置置于<code>&lt;body&gt;</code> <code>&lt;/body&gt;</code>之间。
+          <div class="post-more-link text-center">
+            <a class="btn" href="/posts/20160327-section-and-outlines-in-html5.html#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
       
     </div>
@@ -1176,113 +1063,12 @@
 
       
         
-          
-            <h2 id="Value"><a href="#Value" class="headerlink" title="Value"></a>Value</h2><h3 id="px"><a href="#px" class="headerlink" title="px"></a>px</h3><p>px是固定值，不过针对于显示器的小点来说，也可以算是相对值。<br>浏览器默认font-size为16px。</p>
-<h3 id="em"><a href="#em" class="headerlink" title="em"></a>em</h3><p>em是相对值，它是倍数关系。当浏览器的默认font-size=16px时，16px=1em。当浏览器的默认font-size=20px时，20px=1em。</p>
-<h3 id=""><a href="#" class="headerlink" title="%"></a>%</h3><p>%是相对值，相对于父元素的font-size值。比如，父元素的font-size=16px，子元素设置了font-size=200%，则子元素的字号为16px * 200%=32px。</p>
-<h2 id="px和em的换算"><a href="#px和em的换算" class="headerlink" title="px和em的换算"></a>px和em的换算</h2><p>主要是把px换算成em，这样做是因为em是相对值，能够在不同分辨率的情况下自适应字体大小。<br>换算公式为：</p>
-<pre><code>px/16=em
-</code></pre><p>px指想要的px具体值，如16px，24px，32px等。<br>16指当前的计算标准，即父元素的font-size值，不一定就是16px，而是看最近的父元素的字号是多少。<br>那么，就可以换算出当想要的px值是16px，父元素的字号也是16px时，等价的em值为：</p>
-<pre><code>16px/16=1em
-</code></pre><p>同理：</p>
-<table>
-<thead>
-<tr>
-<th>想要的px值</th>
-<th>父元素字号</th>
-<th>等价的em值</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>14px</td>
-<td>16</td>
-<td>14px/16=0.875em</td>
-</tr>
-<tr>
-<td>10px</td>
-<td>16</td>
-<td>10px/16=0.625em</td>
-</tr>
-<tr>
-<td>14px</td>
-<td>14</td>
-<td>14px/14=1em</td>
-</tr>
-<tr>
-<td>10px</td>
-<td>14</td>
-<td>10px/14=0.714em</td>
-</tr>
-</tbody>
-</table>
-<p>反过来，知道了em值，知道了父元素的字号，就可以倒算回等价的px值，如：</p>
-<pre><code>1em*16=16px
-</code></pre><h2 id="px、em、-三者之间的换算应用"><a href="#px、em、-三者之间的换算应用" class="headerlink" title="px、em、%三者之间的换算应用"></a>px、em、%三者之间的换算应用</h2><p>以给<code>&lt;body&gt;</code>设置css：<code>body{font-size:62.5%}</code>为例。</p>
-<p>之前遇到了字体无法自适应的问题，网上搜了解决方法，就是将<code>&lt;body&gt;</code>字号设为62.5%，然后此时的1em正好等于10px，便于px与em之间的换算。那么62.5%是怎么来的呢？</p>
-<p>看之前上面那个表格的第三行就知道了，10px/16=0.625em。但是这个推理过程慢慢来看：</p>
-<p>首先，我们的目的是要让换算标准为10，因为当换算标准为10的时候，意味着14px=14px/10=1.4em，26px=26px/10=2.6em，这样把px换算成em就非常方便，心算就能出来了。<br>其次，怎样使换算标准为10？上面说到，<strong>换算标准就是父元素的字号</strong>，我们要应用到整个页面字体，此时最大的父元素就是<code>&lt;body&gt;</code>，也就是<code>&lt;body&gt;</code>的字号应该是换算标准，所以它应该是10px。我们又知道，浏览器的默认字号为16px，所以浏览器的字号是继承给<code>&lt;body&gt;</code>的，我们又知道，<strong>元素字号的百分比值是根据父元素的字号来乘以该百分比的</strong>，即<code>&lt;body&gt;</code>的字号应该是：浏览器字号16px*百分比=10px，这样，这个百分比=10px/16px=62.5%。即<code>body{font-size:62.5%}</code>。</p>
-<p>根据这个结论，我们来顺着验证下：</p>
-<table>
-<thead>
-<tr>
-<th>序号</th>
-<th>子元素</th>
-<th>父元素</th>
-<th>子元素的字号值换算</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>第一步</td>
-<td>body</td>
-<td>浏览器</td>
-<td>百分比与px的换算</td>
-</tr>
-<tr>
-<td>字号值</td>
-<td>62.5%</td>
-<td>16px</td>
-<td>body：62.5%*16px=10px</td>
-</tr>
-<tr>
-<td>第二步</td>
-<td>div</td>
-<td>body</td>
-<td>px与em的换算</td>
-</tr>
-<tr>
-<td>字号值</td>
-<td>16px</td>
-<td>10px（由上一步得到）</td>
-<td>div：16px/10=1.6em</td>
-</tr>
-</tbody>
-</table>
-<p>这样就最终达成了所有子元素与父元素字号px和em之间的换算标准为10。这样我们再来重新理解一下这个css设置<code>body:{font-size:62.5%}</code>，它其实是把整个内容字体缩小到62.5%，再根据em的倍数来进行放大到合适的px值。比如，本来是16px，现在缩小62.5%变成了10px，但是我们还是想要16px，于是又把10px放大1.6倍（em）变成了16px。为什么要经过62.5%这道中间程序，完全是为了得到10这个换算标准，便于计算而已。</p>
-<p>然而，它有一个大问题：这个设置能使所有的计算标准都为10px吗？<br>来看例子css：<br><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&lt;style type="text/css"&gt;</div><div class="line">body &#123;font-size:62.5%;&#125;</div><div class="line">.px16 &#123;font-size:1.6em&#125;</div><div class="line">.px25point6 &#123;font-size:1.6em;&#125;</div><div class="line">&lt;/style&gt;</div></pre></td></tr></table></figure></p>
-<p>例子html：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"px16"</span>&gt;</span></div><div class="line">    我的字号是16px：16px*62.5%*1.6em=16px</div><div class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"px25point6"</span>&gt;</span></div><div class="line">            我的字号是16px*1.6em=25.6px，因为我的父元素的字号是16px，所以我的计算标准是16px，而不是body的62.5%也就是10px。</div><div class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div></pre></td></tr></table></figure></p>
-<p>效果图:<br><img src="http://7xsg1m.com1.z0.glb.clouddn.com/font-demo1.png" alt="font-demo.png"><br>问题出来了，当更深层嵌套的元素使用em时，它的计算标准是根据自己的上一级父元素的字号，而不是基于<code>&lt;body&gt;</code>的10px。而上一级父元素的字号已经不是10px了，可能是任何数值，那么此时要设置自适应的em，依旧需要公式：<strong>px/标准=em</strong>。<br>这样一来，为body设置<code>font-size:62.5%</code>以达到10px的计算标准来便于计算的目的并不是完整的解决了所有的计算。它的实用性被削弱了，还对不清楚的人造成了计算深层嵌套元素字号的混乱和麻烦。<br>因此，想设置自适应，不如老老实实的遵循最基本的原理，也就是这个公式：</p>
-<pre><code>px/父元素字号=em
-</code></pre><p>##以font-size的值为标准计算数值的属性<br>有些属性如<code>line-height</code>,<code>text-indent</code>，当它们本身的值的单位为<code>em</code>时，就需要根据元素的<code>font-size</code>值为基础计算。</p>
-<p>有两种情况:</p>
-<p>###当元素的font-size为固定值px时<br>如：</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">div</span> &#123;</div><div class="line">    <span class="attribute">font-size</span>:<span class="number">16px</span>;</div><div class="line">    <span class="attribute">line-height</span>:<span class="number">2em</span>;</div><div class="line">    <span class="attribute">text-indent</span>:<span class="number">2em</span>;</div><div class="line">    &#125;</div></pre></td></tr></table></figure>
-<p>div的line-height=16px<em>2=32px；<br>div的text-indent=16px</em>2=32px。</p>
-<h3 id="当元素的font-size为相对值em时"><a href="#当元素的font-size为相对值em时" class="headerlink" title="当元素的font-size为相对值em时"></a>当元素的font-size为相对值em时</h3><p>如：</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">div</span> &#123;</div><div class="line">    <span class="attribute">font-size</span>:<span class="number">2em</span>;</div><div class="line">    <span class="attribute">line-height</span>:<span class="number">2em</span>;</div><div class="line">    <span class="attribute">text-indent</span>:<span class="number">2em</span>;</div><div class="line">    &#125;</div></pre></td></tr></table></figure>
-<p>首先，计算div的font-size=父元素字号设16px<em>2=32px；<br>然后，计算div的的line-height=32px</em>2=64px；<br>同理，计算div的text-indent=32px*2=64px。</p>
-<h2 id="line-height的value换算问题"><a href="#line-height的value换算问题" class="headerlink" title="line-height的value换算问题"></a>line-height的value换算问题</h2><h3 id="value为em或-时"><a href="#value为em或-时" class="headerlink" title="value为em或%时"></a>value为em或%时</h3><p>元素的line-height的px值以本元素的font-size为标准计算，上一小节已经说到了。<br>此时，如果其子元素不单独设置line-height，该元素的line-height的值将继承给子元素，且 <strong>与子元素的font-size无关</strong>。<br><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">div</span>&#123;<span class="attribute">font-size</span>:<span class="number">10px</span>;<span class="attribute">line-height</span>:<span class="number">2em</span>;<span class="comment">/*或line-height：200%*/</span>&#125;</div><div class="line"><span class="selector-tag">div</span> <span class="selector-tag">p</span>&#123;<span class="attribute">font-size</span>:<span class="number">12px</span>;&#125;</div></pre></td></tr></table></figure></p>
-<p>此时，<code>&lt;p&gt;</code>的line-height=10px*2em（或200%）=20px。</p>
-<h3 id="value为系数（一个无单位的数值）时"><a href="#value为系数（一个无单位的数值）时" class="headerlink" title="value为系数（一个无单位的数值）时"></a>value为系数（一个无单位的数值）时</h3><p>元素的line-height的px值以本元素的font-size为计算标准。<br>但是，如果其子元素不单独设置line-height，该元素的line-height的系数将继承给子元素，且 <strong>与子元素的font-size有关</strong>。<br>如：</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">div</span>&#123;<span class="attribute">font-size</span>:<span class="number">10px</span>;<span class="attribute">line-height</span>:<span class="number">2</span>;&#125;</div><div class="line"><span class="selector-tag">div</span> <span class="selector-tag">p</span>&#123;<span class="attribute">font-size</span>:<span class="number">12px</span>;&#125;</div></pre></td></tr></table></figure>
-<p>此时，<code>&lt;p&gt;</code>的line-height=12px*2=24px。</p>
-<p>以上两种情况，当子元素单独设置了line-height时，回到那句话：</p>
-<blockquote>
-<p><strong>元素的line-height的px值以本元素的font-size为计算标准。</strong></p>
-</blockquote>
-
-          
+          <h2 id="Value"><a href="#Value" class="headerlink" title="Value"></a>Value</h2><h3 id="px"><a href="#px" class="headerlink" title="px"></a>px</h3><p>px是固定值，不过针对于显示器的小点来说，也可以算是相对值。<br>浏览器默认font-size为16px。
+          <div class="post-more-link text-center">
+            <a class="btn" href="/posts/20160326-css-font-size-value.html#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
       
     </div>
@@ -1399,50 +1185,16 @@
 
       
         
-          
-            <h2 id="例子1：单行文本垂直居中"><a href="#例子1：单行文本垂直居中" class="headerlink" title="例子1：单行文本垂直居中"></a>例子1：单行文本垂直居中</h2><p><strong>单行</strong>文本或元素垂直居中对齐：</p>
+          <h2 id="例子1：单行文本垂直居中"><a href="#例子1：单行文本垂直居中" class="headerlink" title="例子1：单行文本垂直居中"></a>例子1：单行文本垂直居中</h2><p><strong>单行</strong>文本或元素垂直居中对齐：</p>
 <pre><code>height: 20px;
 line-height: 20px;
 overflow: hidden;
-</code></pre><p>已在爱出行.html中css文件的16，17行测试运用，解决了头顶灰色导航栏的文本不居中问题。</p>
-<p>问题复盘：</p>
-<p>通过</p>
-<pre><code>padding-top: 10px;
-padding-bottom: 10px;
-</code></pre><p>来设置居中，像素值是根据font－size和height来倒算出来的。但是，由于chrome和Safari内容框定义不同，例如，在chrome中font-size: 12px，则内容框高度就是12px，但是在Safari中内容框的高度却变成了17px。因此采用padding自定义来设置垂直居中，会导致在不同浏览器中效果不同。</p>
-<p>在网上通过第一个代码成功解决问题。</p>
-<p>可参考文章：<br><a href="http://www.w3help.org/zh-cn/causes/RD5017" target="_blank" rel="external">《Safari chrome中行框高度计算有误》</a> {解决方法}</p>
-<h2 id="例子2：导航栏垂直居中问题"><a href="#例子2：导航栏垂直居中问题" class="headerlink" title="例子2：导航栏垂直居中问题"></a>例子2：导航栏垂直居中问题</h2><p>问题：<br>在父元素中设置：</p>
-<pre><code>height: 20px;
-line-height: 20px;
-overflow: hidden;
-</code></pre><p>后，链接<code>&lt;a&gt;</code>因为设置成了块级元素，行高也变成了20px，很丑。虽然垂直居中了，行高又带来了背景块变大的问题。</p>
-<p>解决方法：<br>既然是继承父元素的行高，那么不继承就行了。单独为<code>&lt;a&gt;</code>设置一个合适的line-height，这样就解决了。</p>
-<p>内部链接：:: 项目爱出行html+css总结::（手动搜索）</p>
-<h2 id="父元素高度确定的多行文本、图片、块级元素的垂直居中问题"><a href="#父元素高度确定的多行文本、图片、块级元素的垂直居中问题" class="headerlink" title="父元素高度确定的多行文本、图片、块级元素的垂直居中问题"></a>父元素高度确定的多行文本、图片、块级元素的垂直居中问题</h2><h3 id="插入到table中"><a href="#插入到table中" class="headerlink" title="插入到table中"></a>插入到table中</h3><p>即将内容插入到：</p>
-<pre><code>&lt;table&gt;&lt;tr&gt;&lt;td&gt;内容&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-</code></pre><p>这时，td默认了vertical-align:middle，所以不用额外设置，内容自动垂直居中。<br><strong>注意</strong>：vertical-align只对inline-block元素起作用，所以不能对<code>&lt;table&gt;</code>设置该属性。</p>
-<h3 id="将元素的display设置为table-cell"><a href="#将元素的display设置为table-cell" class="headerlink" title="将元素的display设置为table-cell"></a>将元素的display设置为table-cell</h3><p>是为了激活verticl-align属性，就能对元素设置垂直居中。</p>
-<h3 id="利用绝对定位"><a href="#利用绝对定位" class="headerlink" title="利用绝对定位"></a>利用绝对定位</h3><p>首先要满足2个条件：</p>
-<ol>
-<li>垂直居中的该元素有一个父元素，并且该元素有固定高；</li>
-<li>刚好要绝对定位该元素（或者其父元素是不脱离文档流的，那么该元素设置了绝对定位也会在父元素的文档流中。）</li>
-</ol>
-<p>方法：</p>
-<ol>
-<li>指定父元素<code>position:relative</code>；</li>
-<li>指定该元素固定height；</li>
-<li>设置该元素：<code>position:absolute;top:50%</code>，使其下降到父元素的一半距离；</li>
-<li>设置该元素：<code>margin-top: -x</code>，x为该元素固定height的一半。</li>
-</ol>
-<p>代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">&lt;style type=&quot;text/css&quot;&gt;</div><div class="line">	#myoutercontainer &#123; position:relative &#125;</div><div class="line">	#myinnercontainer &#123; position:absolute; top:50%; height:10em; margin-top:-5em &#125;</div><div class="line">&lt;/style&gt;</div><div class="line">...</div><div class="line">&lt;div id=&quot;myoutercontainer&quot;&gt;</div><div class="line">	&lt;div id=&quot;myinnercontainer&quot;&gt;</div><div class="line">		&lt;p&gt;Hey look! I&apos;m vertically centered!&lt;/p&gt;</div><div class="line">		&lt;p&gt;How sweet is this?!&lt;/p&gt;</div><div class="line">	&lt;/div&gt;</div><div class="line">&lt;/div&gt;</div></pre></td></tr></table></figure></p>
-<p>参考：</p>
-<ol>
-<li><a href="http://phrogz.net/css/vertical-align/index.html" target="_blank" rel="external">Understanding vertical-align, or “How (Not) To Vertically Center Content”</a></li>
-<li><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/vertical-align" target="_blank" rel="external">vertical-align(MDN)</a></li>
-</ol>
-
-          
+</code></pre><p>已在爱出行.html中css文件的16，17行测试运用，解决了头顶灰色导航栏的文本不居中问题。<br>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/posts/20160318-css-vertical-center-align.html#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
       
     </div>
@@ -1559,19 +1311,12 @@ overflow: hidden;
 
       
         
-          
-            <h2 id="行内元素及行内块级元素的水平居中"><a href="#行内元素及行内块级元素的水平居中" class="headerlink" title="行内元素及行内块级元素的水平居中"></a>行内元素及行内块级元素的水平居中</h2><p>为行内元素（如<code>&lt;a&gt;</code> <code>&lt;em&gt;</code> <code>&lt;strong&gt;</code>）和行内块级元素（如<code>&lt;img&gt;</code> <code>&lt;input&gt;</code>）设置水平居中，则在其父元素设置：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">text-align:center;</div></pre></td></tr></table></figure></p>
-<p>text-align属性<strong>只适用于inline/inline-block元素</strong>，但要使inline/inline-block元素居中，需在其<strong><em>父元素</em></strong>中设置<code>text-align:center</code>，对该元素自身设置是无效果的。</p>
-<h2 id="块级元素（block）的水平居中："><a href="#块级元素（block）的水平居中：" class="headerlink" title="块级元素（block）的水平居中："></a>块级元素（block）的水平居中：</h2><h3 id="定宽块级元素"><a href="#定宽块级元素" class="headerlink" title="定宽块级元素"></a>定宽块级元素</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">margin: numberpx auto;</div></pre></td></tr></table></figure>
-<p>以上代码可自动居中，但在同时设置了width=100%时无效。</p>
-<p>IE5及更早的对齐，需要增加text-align:left。</p>
-<h3 id="不定宽块级元素"><a href="#不定宽块级元素" class="headerlink" title="不定宽块级元素"></a>不定宽块级元素</h3><h4 id="插入table元素中"><a href="#插入table元素中" class="headerlink" title="插入table元素中"></a>插入table元素中</h4><p>将元素插入<code>&lt;table&gt;</code>中：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">table</span>&gt;</span><span class="tag">&lt;<span class="name">tr</span>&gt;</span><span class="tag">&lt;<span class="name">td</span>&gt;</span>块级元素<span class="tag">&lt;/<span class="name">td</span>&gt;</span><span class="tag">&lt;<span class="name">tr</span>&gt;</span><span class="tag">&lt;/<span class="name">table</span>&gt;</span></div></pre></td></tr></table></figure></p>
-<p>然后设置css：<br><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">table</span>&#123;<span class="attribute">margin</span>: <span class="number">0</span> atuo;&#125;</div></pre></td></tr></table></figure></p>
-<h4 id="设置display-inline"><a href="#设置display-inline" class="headerlink" title="设置display:inline"></a>设置display:inline</h4><p><code>display:inline</code>将块级元素显示为内联元素，再在其父元素中设置<code>text-align:center</code>。<br>优点：简化无语义标签；<br>缺点，使块级元素不能设置长高度等块级元素的特质。</p>
-<h4 id="利用float和position"><a href="#利用float和position" class="headerlink" title="利用float和position"></a>利用float和position</h4><p>对父元素设置<code>float</code>和相对定位<code>left:50%</code>，再对子元素设置相对定位<code>left:-50%</code>。如下代码：</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.father</span>&#123;</div><div class="line">        <span class="attribute">float</span>:left;</div><div class="line">        <span class="attribute">position</span>:relative;</div><div class="line">        <span class="attribute">left</span>:<span class="number">50%</span>;</div><div class="line">&#125;</div><div class="line"><span class="selector-class">.child</span>&#123;</div><div class="line">        <span class="attribute">position</span>:relative;</div><div class="line">        <span class="attribute">left</span>:-<span class="number">50%</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-
-          
+          <h2 id="行内元素及行内块级元素的水平居中"><a href="#行内元素及行内块级元素的水平居中" class="headerlink" title="行内元素及行内块级元素的水平居中"></a>行内元素及行内块级元素的水平居中</h2><p>为行内元素（如<code>&lt;a&gt;</code> <code>&lt;em&gt;</code> <code>&lt;strong&gt;</code>）和行内块级元素（如<code>&lt;img&gt;</code> <code>&lt;input&gt;</code>）设置水平居中，则在其父元素设置：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">text-align:center;</div></pre></td></tr></table></figure></p>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/posts/20160316-css-horizontal-center-align.html#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
       
     </div>
@@ -1688,67 +1433,12 @@ overflow: hidden;
 
       
         
-          
-            <p><a href="http://www.caopeng.net/2011/02/what-is-the-css-containing-block-containing-block/" target="_blank" rel="external">包含块</a>是一个元素进行定位和尺寸计算的参照框，它是一个矩形。例如对元素p定位left:20px，那么这个left:20px是针对什么的左边20像素？那就是包含块的边界位置。</p>
-<h2 id="包含块的判定："><a href="#包含块的判定：" class="headerlink" title="包含块的判定："></a>包含块的判定：</h2><h3 id="无position属性的元素（也就不涉及偏移量）："><a href="#无position属性的元素（也就不涉及偏移量）：" class="headerlink" title="无position属性的元素（也就不涉及偏移量）："></a><strong>无position属性的元素（也就不涉及偏移量）：</strong></h3><p>元素的包含块是该元素上一级父元素块级框的内容边界（<strong><em>content edge</em></strong>），例子：</p>
-<pre><code>&lt;html&gt;&lt;body&gt;&lt;div&gt;&lt;p&gt;&lt;/p&gt;&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;
-</code></pre><p>元素    包含块<br>html    初始包含块<br>body   html<br>div      body<br>p         div</p>
-<h3 id="有position属性的元素："><a href="#有position属性的元素：" class="headerlink" title="有position属性的元素："></a><strong>有position属性的元素：</strong></h3><ul>
-<li>static：不定位，left等无效，无包含块；</li>
-<li>relative：包含块为该元素原本在的<strong><em>内容边界</em></strong>；<ul>
-<li>例子：<code>&lt;p id=“relative”&gt;&lt;/p&gt;</code>，p元素的包含块是p元素初始内容框</li>
-</ul>
-</li>
-<li>fixed：<ul>
-<li>设置偏移量时，包含块为当前<em>视窗</em>本身；</li>
-<li>未设置偏移量时：<ul>
-<li>无已定位的祖先元素，会定位到最近父元素的左上角；</li>
-<li>有已定位的祖先元素<ul>
-<li>祖先元素无偏移量，会定位到祖先元素的左上角。</li>
-<li>祖先元素有偏移量<ul>
-<li>祖先元素为position：relative<ul>
-<li>祖先元素是<strong>父元素</strong>时，偏移量不会继承下来，该元素还是定位到<strong>父元素的左上角固定不动</strong>；</li>
-<li>祖先元素是父元素以外的祖先元素时，偏移量会继承下来，但该元素<strong>以视窗为偏移</strong>。</li>
-</ul>
-</li>
-<li>祖先元素为position：absolute/fixed<ul>
-<li>不论父元素还是祖先元素有偏移量，会继承偏移量，但该元素<strong>以视窗为基准偏移</strong>。</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>position：<ul>
-<li>设置偏移量时<ul>
-<li>该元素附近有position值为<strong>static</strong>或<strong>无已定位</strong>的祖先元素，其包含块为<strong>初始包含块</strong>  <code>&lt;html&gt;</code>。</li>
-<li>该元素附近有position值为<strong>非static</strong>的祖先元素，包含块为该祖先元素：<ul>
-<li>祖先元素是<em>块级元素</em>：包含块为祖先元素的<strong><em>padding edge</em></strong>形成；</li>
-<li>祖先元素是<em>内联元素</em>：包含块为祖先元素的<strong><em>内容边界</em></strong>形成。（direction:ltr/rtl，不同时判定不同，这点我还没搞清楚，以后遇到再补）。</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>未设置偏移量时<ul>
-<li>无已定位的祖先元素，本元素会定位到最近父元素的左上角；</li>
-<li>有已定位的祖先元素：<ul>
-<li>祖先元素未设置偏移量，本元素会定位到<strong>祖先元素的左上角</strong></li>
-<li>祖先元素已设置偏移量，本元素会继承偏移量，<strong>以祖先元素为偏移基准</strong>。</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h3 id="初始包含块"><a href="#初始包含块" class="headerlink" title="初始包含块"></a><strong>初始包含块</strong></h3><p>是根元素的盒子外边界组成，<strong>根元素</strong>是没有父元素的元素，即<code>&lt;html&gt;</code>。</p>
-<p>参考：<a href="http://www.imooc.com/code/3585" target="_blank" rel="external">慕课网－relative和position的配合</a></p>
-
-          
+          <p><a href="http://www.caopeng.net/2011/02/what-is-the-css-containing-block-containing-block/">包含块</a>是一个元素进行定位和尺寸计算的参照框，它是一个矩形。例如对元素p定位left:20px，那么这个left:20px是针对什么的左边20像素？那就是包含块的边界位置。
+          <div class="post-more-link text-center">
+            <a class="btn" href="/posts/20160304-css-containing-block.html#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
       
     </div>

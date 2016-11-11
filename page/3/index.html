@@ -327,28 +327,12 @@
 
       
         
-          
-            <h2 id="类选择器中的多类选择器"><a href="#类选择器中的多类选择器" class="headerlink" title="类选择器中的多类选择器"></a>类选择器中的多类选择器</h2><p>属性class的值可以是一个词列表，即包含多个单词，用空格分离，例如class=“big warning red”。这时，如果想只对class为“big warning red”的值设置样式，为了不应用到其他class=“big”or“warning”or“red”的元素中，就要使用多类选择器。</p>
-<p>多类选择器选择的<strong>class值</strong>必须等于或包含词列表，不能小于。<em>不区分词列表中词的顺序。</em></p>
-<p>例子：<br><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">&lt;style&gt;</div><div class="line">.big.warning.red &#123;color:red;&#125;</div><div class="line">.big.warning &#123;color:red;&#125;</div><div class="line">.big.red &#123;color:red;&#125;</div><div class="line">.warning.red &#123;color:red;&#125;</div><div class="line">&lt;/style&gt;</div></pre></td></tr></table></figure></p>
-<p>以上4种方法都能对设置有class=“big warning red”的元素应用color:red的样式。<br>当然，<br><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.big</span> &#123;<span class="attribute">color</span>:red;&#125;</div><div class="line"><span class="selector-class">.warning</span> &#123;<span class="attribute">color</span>:red;&#125;</div><div class="line"><span class="selector-class">.red</span> &#123;<span class="attribute">color</span>:red;&#125;</div></pre></td></tr></table></figure></p>
-<p>也能对它应用样式，但是这三个还会应用到其他class值为big或warning或red的元素中，就不能达到只想对设置class=“big warning red”的元素应用样式的目的了。所以，我对多类选择器的理解就是，在class众多且有类似或相同值的时候，更精细的定位某一个元素。</p>
-<p>另外，当一个元素除了属于某个类型外，还属于另外一个类型，比如一个<code>&lt;div&gt;</code>既是导航class=”nav”，但又是在几个导航中专门针对书的导航class=”book”，为了方便精准定位一个属于书的导航，或者只想定位和书有关的元素，这时可以为这个<code>&lt;div&gt;</code>设置<code>class=&quot;nav book&quot;</code>。</p>
-<blockquote>
-<p><strong>注意:</strong> id的值不能为词列表，id选择器没有多id选择器。</p>
-</blockquote>
-<h2 id="属性值选择器中的-attribute-value-和-attribute-value-的区别"><a href="#属性值选择器中的-attribute-value-和-attribute-value-的区别" class="headerlink" title="属性值选择器中的[attribute|=value]和[attribute^=value]的区别"></a>属性值选择器中的<code>[attribute|=value]</code>和<code>[attribute^=value]</code>的区别</h2><p>例子css：<br><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="selector-attr">[alt|=hello]</span> &#123;<span class="attribute">background</span>:red;&#125;</div><div class="line"><span class="selector-attr">[alt^=hello]</span> &#123;<span class="attribute">background</span>:blue;&#125;</div></pre></td></tr></table></figure></p>
-<p>例子html：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">id</span>=<span class="string">"imag1"</span> <span class="attr">alt</span>=<span class="string">"hello"</span> <span class="attr">src</span>=<span class="string">""</span> &gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">id</span>=<span class="string">"imag2"</span> <span class="attr">alt</span>=<span class="string">"hello-world"</span> <span class="attr">src</span>=<span class="string">""</span> &gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">id</span>=<span class="string">"imag3"</span> <span class="attr">alt</span>=<span class="string">"hello world"</span> <span class="attr">src</span>=<span class="string">""</span> &gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">id</span>=<span class="string">"imag4"</span> <span class="attr">alt</span>=<span class="string">"helloworld"</span> <span class="attr">src</span>=<span class="string">""</span> &gt;</span></div></pre></td></tr></table></figure></p>
-<p>imag1和imag2背景为红色；<br>imag1,imag2,imag3,imag4背景为蓝色。<br>即，<code>[alt|=hello]</code>只能应用到<code>alt=hello</code>和<code>alt=hello-</code>开头的词中。而<code>[alt^=hello]</code>则没有限制，所有以hello开头的都能应用。</p>
-<h2 id="伪类-Element-first-child"><a href="#伪类-Element-first-child" class="headerlink" title="伪类 Element:first-child"></a>伪类 Element:first-child</h2><p>为方便理解，这里把Element设为<code>&lt;p&gt;</code>元素。</p>
-<p>其意义不是选择了<code>&lt;p&gt;</code>下的第一个子元素。<br>而是<em>选择了某父元素下第一个子元素是<code>&lt;p&gt;</code>的元素。</em>主要有两层意思：</p>
-<ol>
-<li><code>&lt;p&gt;</code>是<strong><em>任何</em></strong>父元素下的一个子元素。</li>
-<li>该父元素下有许多子元素，<code>&lt;p&gt;</code>必须是第一个。这个第一个是针对父元素的众多子元素来说，而不是针对<code>&lt;p&gt;</code>元素本身。即假如父元素中有多个<code>&lt;p&gt;</code>的同级子元素，<code>p:first-child</code>不是指第一个<code>&lt;p&gt;</code>元素，而是指父元素中位置为第一个子元素的元素必须是<code>&lt;p&gt;</code>，否则就无法应用。</li>
-</ol>
-<h2 id="选择器相关的其它资料"><a href="#选择器相关的其它资料" class="headerlink" title="选择器相关的其它资料"></a>选择器相关的其它资料</h2><p><a href="http://www.zhangxinxu.com/wordpress/2012/03/小tip-css后代选择器可能的错误认识/" target="_blank" rel="external">后代选择器小知识点</a>::面试题::</p>
-
-          
+          <h2 id="类选择器中的多类选择器"><a href="#类选择器中的多类选择器" class="headerlink" title="类选择器中的多类选择器"></a>类选择器中的多类选择器</h2><p>属性class的值可以是一个词列表，即包含多个单词，用空格分离，例如class=“big warning red”。这时，如果想只对class为“big warning red”的值设置样式，为了不应用到其他class=“big”or“warning”or“red”的元素中，就要使用多类选择器。
+          <div class="post-more-link text-center">
+            <a class="btn" href="/posts/20160302-null.html#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
       
     </div>
@@ -465,35 +449,19 @@
 
       
         
-          
-            <h2 id="内容显示不同"><a href="#内容显示不同" class="headerlink" title="内容显示不同"></a>内容显示不同</h2><ul>
+          <h2 id="内容显示不同"><a href="#内容显示不同" class="headerlink" title="内容显示不同"></a>内容显示不同</h2><ul>
 <li>替换元素是根据元素的标签和属性的不同，来显示不同的内容<ul>
 <li>如<code>&lt;input&gt;</code>根据type的值不同，来显示文本/复选框/按钮</li>
 <li>从代码本身来看是无法直接知道具体内容的</li>
 <li>替换元素有：<code>&lt;img&gt;</code>,<code>&lt;input&gt;</code>,<code>&lt;textarea&gt;</code>,<code>&lt;object&gt;</code>,<code>&lt;select&gt;</code></li>
 </ul>
 </li>
-<li>非替换元素直接根据元素内容来告诉浏览器显示什么<ul>
-<li>如<code>&lt;p&gt;hello&lt;/p&gt;</code></li>
-<li>从代码本身来看就知道显示的内容是文本“hello”</li>
-<li>大多数元素都是非替换元素</li>
-</ul>
-</li>
-</ul>
-<h2 id="行内元素中的垂直内边距效果不同"><a href="#行内元素中的垂直内边距效果不同" class="headerlink" title="行内元素中的垂直内边距效果不同"></a>行内元素中的垂直内边距效果不同</h2><ul>
-<li>行内替换元素的padding-top/bottom会改变所在块级元素的行高，即增加行框的高度；</li>
-<li>行内非替换元素的padding-top/bottom虽然会改变自身元素的内容高度，但不会改变所在块级元素的行高。</li>
-</ul>
-<h2 id="行内替换元素可以设置width和height，行内非替换元素则不行"><a href="#行内替换元素可以设置width和height，行内非替换元素则不行" class="headerlink" title="行内替换元素可以设置width和height，行内非替换元素则不行"></a>行内替换元素可以设置width和height，行内非替换元素则不行</h2><h2 id="替换元素通常是空元素，如："><a href="#替换元素通常是空元素，如：" class="headerlink" title="替换元素通常是空元素，如："></a>替换元素通常是空元素，如：</h2><ul>
-<li><code>&lt;img src=“” /&gt;</code></li>
-<li><code>&lt;input type=“text”value=“hello”/&gt;</code></li>
-<li>但不是所有替换元素都是空元素</li>
-</ul>
-<blockquote>
-<p>参考：<em><a href="http://www.cnblogs.com/WebShare-hilda/p/4713890.html" target="_blank" rel="external">《替换元素和非替换元素的学习》</a></em></p>
-</blockquote>
-
-          
+<li>非替换元素直接根据元素内容来告诉浏览器显示什么
+          <div class="post-more-link text-center">
+            <a class="btn" href="/posts/20160227-replaced-element-nonreplaced-element.html#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
       
     </div>

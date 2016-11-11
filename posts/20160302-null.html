@@ -84,19 +84,16 @@
 
 
 
-<meta name="description" content="类选择器中的多类选择器属性class的值可以是一个词列表，即包含多个单词，用空格分离，例如class=“big warning red”。这时，如果想只对class为“big warning red”的值设置样式，为了不应用到其他class=“big”or“warning”or“red”的元素中，就要使用多类选择器。
-多类选择器选择的class值必须等于或包含词列表，不能小于。不区分词列表中词的顺">
+<meta name="description" content="类选择器中的多类选择器属性class的值可以是一个词列表，即包含多个单词，用空格分离，例如class=“big warning red”。这时，如果想只对class为“big warning red”的值设置样式，为了不应用到其他class=“big”or“warning”or“red”的元素中，就要使用多类选择器。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="160302-CSS选择器中需要注意的几点">
 <meta property="og:url" content="http://penggeyao.me/posts/20160302-null.html">
 <meta property="og:site_name" content="彭个瑶.ME">
-<meta property="og:description" content="类选择器中的多类选择器属性class的值可以是一个词列表，即包含多个单词，用空格分离，例如class=“big warning red”。这时，如果想只对class为“big warning red”的值设置样式，为了不应用到其他class=“big”or“warning”or“red”的元素中，就要使用多类选择器。
-多类选择器选择的class值必须等于或包含词列表，不能小于。不区分词列表中词的顺">
-<meta property="og:updated_time" content="2016-11-11T05:09:24.000Z">
+<meta property="og:description" content="类选择器中的多类选择器属性class的值可以是一个词列表，即包含多个单词，用空格分离，例如class=“big warning red”。这时，如果想只对class为“big warning red”的值设置样式，为了不应用到其他class=“big”or“warning”or“red”的元素中，就要使用多类选择器。">
+<meta property="og:updated_time" content="2016-11-11T06:01:40.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="160302-CSS选择器中需要注意的几点">
-<meta name="twitter:description" content="类选择器中的多类选择器属性class的值可以是一个词列表，即包含多个单词，用空格分离，例如class=“big warning red”。这时，如果想只对class为“big warning red”的值设置样式，为了不应用到其他class=“big”or“warning”or“red”的元素中，就要使用多类选择器。
-多类选择器选择的class值必须等于或包含词列表，不能小于。不区分词列表中词的顺">
+<meta name="twitter:description" content="类选择器中的多类选择器属性class的值可以是一个词列表，即包含多个单词，用空格分离，例如class=“big warning red”。这时，如果想只对class为“big warning red”的值设置样式，为了不应用到其他class=“big”or“warning”or“red”的元素中，就要使用多类选择器。">
 
 
 
@@ -325,7 +322,7 @@
       
 
       
-        <h2 id="类选择器中的多类选择器"><a href="#类选择器中的多类选择器" class="headerlink" title="类选择器中的多类选择器"></a>类选择器中的多类选择器</h2><p>属性class的值可以是一个词列表，即包含多个单词，用空格分离，例如class=“big warning red”。这时，如果想只对class为“big warning red”的值设置样式，为了不应用到其他class=“big”or“warning”or“red”的元素中，就要使用多类选择器。</p>
+        <h2 id="类选择器中的多类选择器"><a href="#类选择器中的多类选择器" class="headerlink" title="类选择器中的多类选择器"></a>类选择器中的多类选择器</h2><p>属性class的值可以是一个词列表，即包含多个单词，用空格分离，例如class=“big warning red”。这时，如果想只对class为“big warning red”的值设置样式，为了不应用到其他class=“big”or“warning”or“red”的元素中，就要使用多类选择器。 <a id="more"></a></p>
 <p>多类选择器选择的<strong>class值</strong>必须等于或包含词列表，不能小于。<em>不区分词列表中词的顺序。</em></p>
 <p>例子：<br><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">&lt;style&gt;</div><div class="line">.big.warning.red &#123;color:red;&#125;</div><div class="line">.big.warning &#123;color:red;&#125;</div><div class="line">.big.red &#123;color:red;&#125;</div><div class="line">.warning.red &#123;color:red;&#125;</div><div class="line">&lt;/style&gt;</div></pre></td></tr></table></figure></p>
 <p>以上4种方法都能对设置有class=“big warning red”的元素应用color:red的样式。<br>当然，<br><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.big</span> &#123;<span class="attribute">color</span>:red;&#125;</div><div class="line"><span class="selector-class">.warning</span> &#123;<span class="attribute">color</span>:red;&#125;</div><div class="line"><span class="selector-class">.red</span> &#123;<span class="attribute">color</span>:red;&#125;</div></pre></td></tr></table></figure></p>
